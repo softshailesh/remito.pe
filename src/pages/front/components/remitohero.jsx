@@ -3,8 +3,6 @@ import { FaArrowRight } from "react-icons/fa";
 import remito_hero from "../../../assets/remito_hero.webp";
 import AnimatedNumber from "./animatenumber";
 
-
-
 const HeroSection = () => {
   const [money, setmoney] = useState({
     clientPays: 6500,
@@ -14,13 +12,15 @@ const HeroSection = () => {
     conversionRate: 88.1192,
     saving: 23500,
   });
-  
+
   return (
-    <section style={{ backgroundImage: `url(${remito_hero})` }}
-     className="bg-[#fff8f2] bg-cover bg-center bg-no-repeat py-16 px-6 md:px-16 flex flex-col md:flex-row items-center justify-between gap-10">
+    <section
+      style={{ backgroundImage: `url(${remito_hero})` }}
+      className="bg-[#fff8f2] bg-cover bg-center bg-no-repeat py-16 px-6 md:px-16 flex flex-col md:flex-row items-center justify-between gap-10"
+    >
       {/* LEFT CONTENT */}
-      <div className="flex-1 text-center md:text-left space-y-6">
-        <h1 className="text-4xl md:text-5xl font-extrabold text-[#0a2a57] leading-tight">
+      <div className="w-full md:w-[60%] text-center md:text-left space-y-6">
+        <h1 className="font-bai font-bold text-[40px] md:text-[64px] text-[#0a2a57] leading-[100%] tracking-[0%]">
           Seamless Global <br />
           Payments. Simplified for <br />
           You. <AnimatedNumber to={money.saving} />
@@ -43,47 +43,47 @@ const HeroSection = () => {
       </div>
 
       {/* RIGHT CARD */}
-      <div className="flex-1 bg-white rounded-2xl shadow-md p-6">
+      <div className="w-full md:w-[40%] bg-white rounded-2xl shadow-md p-6">
         {/* Input */}
         <div className="flex items-center justify-between mb-4">
-         
-          <div className="flex items-center gap-2">
-             <p className="text-gray-500 text-sm font-medium">Client pays</p>
-            <input
-              type="number"
-              value={money.clientPays}
-              onChange={(e) => {
-                const clientPays = parseFloat(e.target.value) || 0;
-                const conversionRate = money.conversionRate;
-                const youReceive = Math.floor(clientPays * conversionRate);
-                const bankAmount = Math.floor(youReceive * 0.988);
-                const paypalAmount = Math.floor(youReceive * 0.913);
-                const saving = youReceive - paypalAmount;
-                setmoney({
-                  clientPays: clientPays,
-                  youReceive: youReceive,
-                  bankAmount: bankAmount,
-                  paypalAmount: paypalAmount,
-                  conversionRate: conversionRate,
-                  saving: saving,
-                });
-              }}
-              className="w-20 border-none bg-transparent text-[#0a2a57] text-lg font-semibold focus:outline-none text-right"
-            />
-           
-          </div>
-           <div className="flex items-center gap-1">
-              <img
-                src="https://flagcdn.com/w20/us.png"
-                alt="USD"
-                className="h-4"
+          <div className=" w-[65%]flex flex-col items-center gap-2">
+            <p className="text-gray-500 text-sm font-medium">Client pays</p>
+            <div className="w-full">
+              <input
+                type="number"
+                value={money.clientPays}
+                onChange={(e) => {
+                  const clientPays = parseFloat(e.target.value) || 0;
+                  const conversionRate = money.conversionRate;
+                  const youReceive = Math.floor(clientPays * conversionRate);
+                  const bankAmount = Math.floor(youReceive * 0.988);
+                  const paypalAmount = Math.floor(youReceive * 0.913);
+                  const saving = youReceive - paypalAmount;
+                  setmoney({
+                    clientPays: clientPays,
+                    youReceive: youReceive,
+                    bankAmount: bankAmount,
+                    paypalAmount: paypalAmount,
+                    conversionRate: conversionRate,
+                    saving: saving,
+                  });
+                }}
+                className="w-full border-none bg-transparent text-left text-[#0a2a57] text-[34px] font-[700] focus:outline-none p-2"
               />
-              <select className="bg-transparent text-[#0a2a57] font-semibold text-sm focus:outline-none cursor-pointer">
-                <option>USD</option>
-                <option>EUR</option>
-                <option>GBP</option>
-              </select>
             </div>
+          </div>
+          <div className=" w-[30%] flex items-center gap-1">
+            <img 
+              src="https://flagcdn.com/w20/us.png"
+              alt="USD"
+              className="h-4"
+            />
+            <select className="bg-transparent text-[#0a2a57] text-[30px] font-[700] focus:outline-none cursor-pointer">
+              <option>USD</option>
+              <option>EUR</option>
+              <option>GBP</option>
+            </select>
+          </div>
         </div>
 
         {/* Range Slider */}
@@ -131,7 +131,7 @@ const HeroSection = () => {
               alt="INR"
               className="h-4"
             />
-            <span className="text-[#0a2a57] font-semibold text-sm">INR</span>
+            <span className="text-[#0a2a57] font-semibold text-[30px]">INR</span>
           </div>
         </div>
 
