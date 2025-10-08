@@ -1,13 +1,13 @@
-import React from 'react'
-import Header from './components/header'
+import Navbar from "./components/header";
+import HeroSection from "./components/remitohero";
 
 const Landingpage = () => {
   return (
     <div>
-        <Header />
-      AAAAAAAAAAAAAAAAAAAAAAA
+      <Navbar />
+      <HeroSection />
     </div>
-  )
-}
+  );
+};
 
-export default Landingpage
+export default Landingpage;
