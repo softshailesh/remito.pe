@@ -43,11 +43,12 @@ const HeroSection = () => {
       </div>
 
       {/* RIGHT CARD */}
-      <div className="flex-1 w-full md:w-[400px] lg:w-[420px] bg-white rounded-2xl shadow-md p-6">
+      <div className="flex-1 bg-white rounded-2xl shadow-md p-6">
         {/* Input */}
         <div className="flex items-center justify-between mb-4">
-          <p className="text-gray-500 text-sm font-medium">Client pays</p>
+         
           <div className="flex items-center gap-2">
+             <p className="text-gray-500 text-sm font-medium">Client pays</p>
             <input
               type="number"
               value={money.clientPays}
@@ -69,7 +70,9 @@ const HeroSection = () => {
               }}
               className="w-20 border-none bg-transparent text-[#0a2a57] text-lg font-semibold focus:outline-none text-right"
             />
-            <div className="flex items-center gap-1">
+           
+          </div>
+           <div className="flex items-center gap-1">
               <img
                 src="https://flagcdn.com/w20/us.png"
                 alt="USD"
@@ -81,7 +84,6 @@ const HeroSection = () => {
                 <option>GBP</option>
               </select>
             </div>
-          </div>
         </div>
 
         {/* Range Slider */}
