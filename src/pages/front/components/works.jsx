@@ -90,7 +90,7 @@ const Works = () => {
                     {step.title}
                   </h3>
                   <p
-                    className={`text-sm leading-relaxed transition-colors duration-500 ${
+                    className={`text-sm leading-relaxed transition-colors duration-500 border-b-[0.5px] ${
                       index === activeIndex
                         ? "text-gray-700"
                         : "text-gray-500"
@@ -109,3 +109,5 @@ const Works = () => {
 };
 
 export default Works;
+
+

@@ -6,6 +6,8 @@ const AnimatedNumber = ({ from = 0, to = 23500, duration = 1 }) => {
   const [displayValue, setDisplayValue] = useState(from);
 
   useEffect(() => {
+    // Reset to starting value before every animation
+    count.set(from);
     const controls = animate(count, to, {
       duration,
       ease: "easeOut",
@@ -13,13 +15,12 @@ const AnimatedNumber = ({ from = 0, to = 23500, duration = 1 }) => {
         setDisplayValue(Math.floor(latest).toLocaleString("en-IN"));
       },
     });
-
     return controls.stop;
-  }, [count, to, duration]);
+  }, [from, to, duration, count]);
 
   return (
-    <motion.span className="text-yellow-500 font-bold">
-      ₹{displayValue}
+    <motion.span>
+      {displayValue}
     </motion.span>
   );
 };
