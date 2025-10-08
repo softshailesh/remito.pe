@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState } from "react";
 import HowImage from "../../../assets/Works.webp";
 
 const Works = () => {
@@ -26,9 +26,8 @@ const Works = () => {
   ];
 
   const [activeIndex, setActiveIndex] = useState(0);
-  const stepRefs = useRef([]);
 
-  // Auto-slide
+  // Auto-slide effect
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveIndex((prevIndex) =>
@@ -38,19 +37,10 @@ const Works = () => {
     return () => clearInterval(interval);
   }, []);
 
-  // Auto-scroll active step into view
-  useEffect(() => {
-    if (stepRefs.current[activeIndex]) {
-      stepRefs.current[activeIndex].scrollIntoView({
-        behavior: "smooth",
-        block: "center",
-      });
-    }
-  }, [activeIndex]);
-
   return (
     <section className="bg-white py-16 px-6 md:px-12 lg:px-20 overflow-hidden">
       <div className="max-w-7xl mx-auto">
+        {/* Section Heading */}
         <h2 className="text-3xl md:text-4xl font-bold text-center text-slate-800 mb-12">
           How It Works
         </h2>
@@ -68,11 +58,11 @@ const Works = () => {
           </div>
 
           {/* Right Steps */}
-          <div className=" flex items-start">
-            {/* Vertical Progress Bar on LEFT */}
-            <div className="relative h-full  bg-[#E65A24] rounded-full ">
+          <div className="relative flex items-start">
+            {/* Vertical Progress Bar */}
+            <div className="relative h-full w-[4px] bg-gray-200 rounded-full mr-6">
               <div
-                className="absolute top-0 left-0 w-full bg-orange-500 rounded-full transition-all duration-700 ease-in-out"
+                className="absolute top-0 left-0 w-full bg-[#E65A24] rounded-full transition-all duration-700 ease-in-out"
                 style={{
                   height: `${((activeIndex + 1) / steps.length) * 100}%`,
                 }}
@@ -80,11 +70,10 @@ const Works = () => {
             </div>
 
             {/* Step Content */}
-            <div className="space-y-8 flex-1 h-72 overflow-y-auto pr-4">
+            <div className="space-y-8 flex-1">
               {steps.map((step, index) => (
                 <div
                   key={index}
-                  ref={(el) => (stepRefs.current[index] = el)}
                   className={`transition-all duration-500 ${
                     index === activeIndex
                       ? "opacity-100 translate-x-0"
@@ -102,7 +91,9 @@ const Works = () => {
                   </h3>
                   <p
                     className={`text-sm leading-relaxed transition-colors duration-500 ${
-                      index === activeIndex ? "text-gray-700" : "text-gray-500"
+                      index === activeIndex
+                        ? "text-gray-700"
+                        : "text-gray-500"
                     }`}
                   >
                     {step.description}
