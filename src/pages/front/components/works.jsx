@@ -110,29 +110,38 @@
 
 // export default Works;
 
-
 import React, { useEffect, useState, useRef } from "react";
 import HowImage from "../../../assets/Works.webp";
+import free_trial from "../../../assets/free-trial.webp";
+import man_billing from "../../../assets/man-billing.webp";
+import private_mode from "../../../assets/private-mode.webp";
+import wire_transfer from "../../../assets/wire-transfer.webp";
+import { image } from "framer-motion/client";
+import { motion, AnimatePresence } from "framer-motion";
 
 const Works = () => {
   const steps = [
     {
       title: "Sign Up",
+      image: free_trial,
       description:
         "Create an account with us in minutes. Our user-friendly registration process requires only basic personal and business information to get started.",
     },
     {
       title: "Send or Receive Payments",
+      image: wire_transfer,
       description:
         "Choose the amount you want to send, select the destination currency, and provide the recipient’s details. It’s that simple.",
     },
     {
       title: "Track Your Transaction",
+      image: private_mode,
       description:
         "Get real-time updates on the status of your payment. You’ll know when it’s been received and when funds are available.",
     },
     {
       title: "Enjoy Fast & Secure Transfers",
+      image: man_billing,
       description:
         "Your payment is processed swiftly and securely, ensuring your recipient gets the money quickly and without hassle with minimum time.",
     },
@@ -162,61 +171,66 @@ const Works = () => {
           {/* Left Image */}
           <div className="flex justify-center">
             <div className="border-4 border-gray-100 rounded-2xl p-3 shadow-sm">
-              <img
-                src={HowImage}
-                alt="How It Works"
-                className="rounded-xl object-cover w-full max-w-md"
-              />
+              <AnimatePresence mode="wait">
+                <motion.img
+                  key={steps[activeIndex].image}
+                  src={steps[activeIndex].image}
+                  alt="How It Works"
+                  className="rounded-xl object-cover w-full max-w-md"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -20 }}
+                  transition={{ duration: 0.6, ease: "easeInOut" }}
+                />
+              </AnimatePresence>
             </div>
           </div>
 
-          {/* Right Steps with Full-Height Vertical Progress Bar */}
+          {/* Step Content */}
           <div className="relative flex items-start">
-            {/* Full Height Bar */}
-            <div className="relative flex-shrink-0 h-full">
-              <div className="absolute top-0 bottom-0 left-0 w-[4px] bg-gray-200 rounded-full"></div>
-              <div
-                className="absolute top-0 left-0 w-[4px] bg-[#E65A24] rounded-full transition-all duration-700 ease-in-out"
-                style={{
-                  height: `${((activeIndex + 1) / steps.length) * 100}%`,
-                }}
-              ></div>
-            </div>
-
-            {/* Step Content */}
-            <div className="ml-6 space-y-8 flex-1">
+            <div className=" flex-1">
               {steps.map((step, index) => (
                 <div
-                  key={index}
-                  className={`transition-all duration-500 ${
+                  onMouseOver={() => setActiveIndex(index)}
+                  className={`w-full border-l-8 pl-4 transition-all duration-700 ${
                     index === activeIndex
-                      ? "opacity-100 translate-x-0"
-                      : "opacity-50 translate-x-2"
+                      ? "border-[#EB5C26]"
+                      : "border-[#E2E2E2]"
                   }`}
                 >
-                  <h3
-                    className={`text-lg font-semibold mb-2 transition-colors duration-500 ${
+                  <div
+                    key={index}
+                    className={`transition-all duration-700 ${
                       index === activeIndex
-                        ? "text-[#E65A24]"
-                        : "text-slate-700"
+                        ? "opacity-100 translate-x-0"
+                        : "opacity-50 translate-x-2"
                     }`}
                   >
-                    {step.title}
-                  </h3>
-                  <p
-                    className={`text-sm leading-relaxed transition-colors duration-500 border-b-[0.5px] pb-2 ${
-                      index === activeIndex
-                        ? "text-gray-700"
-                        : "text-gray-500"
-                    }`}
-                  >
-                    {step.description}
-                  </p>
+                    <h3
+                      className={`text-lg font-semibold mb-2 transition-colors duration-500 ${
+                        index === activeIndex
+                          ? "text-[#E65A24]"
+                          : "text-slate-700"
+                      }`}
+                    >
+                      {step.title}
+                    </h3>
+                    <p
+                      className={`text-sm leading-relaxed transition-colors duration-500 pb-5 border-b-[0.5px] ${
+                        index === activeIndex
+                          ? "text-gray-700"
+                          : "text-gray-500"
+                      }`}
+                    >
+                      {step.description}
+                    </p>
+                  </div>
                 </div>
               ))}
             </div>
           </div>
         </div>
+        {/* </div> */}
       </div>
     </section>
   );
