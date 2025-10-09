@@ -46,8 +46,7 @@ const industries = [
   },
 ];
 
-const borderColor = "#FFFFFF"; // Lavender line color
-
+const borderColor = "#FFFFFF"; // White border color
 const IndustriesWeServe = () => (
   <div className="bg-[#e7e8fa] py-16 px-4 md:px-12 relative">
     {/* Section Title */}
@@ -106,7 +105,7 @@ const IndustriesWeServe = () => (
     </div>
 
     {/* Bottom 2 industries grid with right and bottom borders */}
-    <div className="relative max-w-4xl mx-auto mt-8">
+    <div className="relative max-w-4xl mx-auto ">
       <div className="grid grid-cols-1 sm:grid-cols-2">
         {industries.slice(4).map((item, index) => (
           <div
