@@ -58,51 +58,53 @@ const Works = () => {
           </div>
 
           {/* Right Steps */}
-          <div className="relative flex items-start">
-            {/* Vertical Progress Bar */}
-            <div className="relative h-full w-[4px] bg-gray-200 rounded-full mr-6">
-              <div
-                className="absolute top-0 left-0 w-full bg-[#E65A24] rounded-full transition-all duration-700 ease-in-out"
-                style={{
-                  height: `${((activeIndex + 1) / steps.length) * 100}%`,
-                }}
-              ></div>
-            </div>
+          {/* <div className="relative flex items-start"> */}
+          {/* <div class="flex flex-col items-center h-96">
+              <div class="w-4 h-16 bg-orange-500 rounded-t"></div>
+              <div class="w-4 h-full bg-gray-200"></div>
+            </div> */}
 
-            {/* Step Content */}
-            <div className="space-y-8 flex-1">
+          {/* Vertical Progress Bar */}
+
+
+
+
+          {/* Step Content */}
+          <div className="relative flex items-start">
+            <div className=" flex-1">
               {steps.map((step, index) => (
-                <div
-                  key={index}
-                  className={`transition-all duration-500 ${
-                    index === activeIndex
+                <div className={`w-full border-l-8 pl-4 transition-all duration-700 ${index===activeIndex ?  "border-[#EB5C26]" :  "border-[#E2E2E2]"}`}>
+                  <div
+                    key={index}
+                    className={`transition-all duration-700 ${index === activeIndex
                       ? "opacity-100 translate-x-0"
                       : "opacity-50 translate-x-2"
-                  }`}
-                >
-                  <h3
-                    className={`text-lg font-semibold mb-2 transition-colors duration-500 ${
-                      index === activeIndex
+                      }`}
+                  >
+                    <h3
+                      className={`text-lg font-semibold mb-2 transition-colors duration-500 ${index === activeIndex
                         ? "text-[#E65A24]"
                         : "text-slate-700"
-                    }`}
-                  >
-                    {step.title}
-                  </h3>
-                  <p
-                    className={`text-sm leading-relaxed transition-colors duration-500 border-b-[0.5px] ${
-                      index === activeIndex
+                        }`}
+                    >
+                      {step.title}
+                    </h3>
+                    <p
+                      className={`text-sm leading-relaxed transition-colors duration-500 pb-5 border-b-[0.5px] ${index === activeIndex
                         ? "text-gray-700"
                         : "text-gray-500"
-                    }`}
-                  >
-                    {step.description}
-                  </p>
+                        }`}
+                    >
+                      {step.description}
+                    </p>
+                  </div>
                 </div>
+
               ))}
             </div>
           </div>
         </div>
+        {/* </div> */}
       </div>
     </section>
   );
