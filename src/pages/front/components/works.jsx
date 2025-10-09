@@ -110,13 +110,11 @@
 
 // export default Works;
 
-import React, { useEffect, useState, useRef } from "react";
-import HowImage from "../../../assets/Works.webp";
+import React, { useEffect, useState } from "react";
 import free_trial from "../../../assets/free-trial.webp";
 import man_billing from "../../../assets/man-billing.webp";
 import private_mode from "../../../assets/private-mode.webp";
 import wire_transfer from "../../../assets/wire-transfer.webp";
-import { image } from "framer-motion/client";
 import { motion, AnimatePresence } from "framer-motion";
 
 const Works = () => {
