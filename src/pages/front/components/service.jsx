@@ -15,9 +15,9 @@ import { motion } from "framer-motion";
 const services = [
   {
     id: "panel1",
-    title: "1. Payment Gateway Integration",
+    title: "1. Global Payment Solutions",
     description:
-      "Enable secure and seamless online payments for businesses and customers.",
+      "We enable seamless transfers in over 35 currencies, connecting businesses and individuals to their global partners, customers, and suppliers." ,
     features: [
       "Multiple payment methods (UPI, Cards, Wallets)",
       "Real-time transaction tracking",
@@ -27,9 +27,9 @@ const services = [
   },
   {
     id: "panel2",
-    title: "2. Embedded Finance Solutions",
+    title: "2. Multi-Currency Accounts",
     description:
-      "Empower businesses to embed financial services directly into their products.",
+      "Accept payments in multiple currencies, while settling in your preferred currency. We take care of the conversion and compliance, so you can focus on your business.",
     features: [
       "Customizable financial modules",
       "Credit and lending APIs",
@@ -39,9 +39,9 @@ const services = [
   },
   {
     id: "panel3",
-    title: "3. Digital Wallet Infrastructure",
+    title: "3. Blockchain-Based Solutions",
     description:
-      "Build branded digital wallets for your business and manage user transactions efficiently.",
+      "Use of stablecoins (e.g., USDC, USDT) and blockchain platforms to reduce cost and improve settlement time.",
     features: [
       "Secure wallet creation and management",
       "User balance tracking",
@@ -51,9 +51,9 @@ const services = [
   },
   {
     id: "panel4",
-    title: "4. API Banking Platform",
+    title: "4. Trade Finance Tools",
     description:
-      "Integrate banking capabilities with your business ecosystem effortlessly.",
+      "Export/import financing, invoice factoring, and credit insurance to reduce payment risk and improve liquidity.",
     features: [
       "Account opening and management",
       "Virtual account creation",
@@ -66,6 +66,18 @@ const services = [
     title: "5. Open Banking APIs",
     description:
       "Enable seamless integration between MSME accounting software and payment platforms for better automation and reconciliation.",
+    features: [
+      "International invoicing and payments",
+      "Multi-currency accounts for businesses",
+      "Real-time payment tracking and notifications",
+      "Automated payment solutions for e-commerce",
+    ],
+  },
+   {
+    id: "panel6",
+    title: "6. Payment Links",
+    description:
+      "Generate one-time or recurring payment links that can be sent via email, SMS, WhatsApp, or embedded on your website. No coding required. Customers can pay in a few clicks. ",
     features: [
       "International invoicing and payments",
       "Multi-currency accounts for businesses",
@@ -122,7 +134,7 @@ const Service = () => {
 
       <Stack alignItems="center" spacing={0}>
         {services.map((service, index) => {
-          const isOpenBanking = service.id === "panel5";
+          const isOpenBanking = service.id === "panel6";
           const isActive = expanded === service.id;
 
           return (
