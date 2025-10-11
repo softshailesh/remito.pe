@@ -158,7 +158,7 @@ const Works = () => {
   }, []);
 
   return (
-    <section className="bg-white py-16 px-6 md:px-12 lg:px-20 overflow-hidden">
+    <section className="bg-[#F5F5F5] py-16 px-6 md:px-12 lg:px-20 overflow-hidden">
       <div className="max-w-7xl mx-auto">
         {/* Section Heading */}
         <h2 className="text-3xl md:text-4xl font-bold text-center text-slate-800 mb-12">

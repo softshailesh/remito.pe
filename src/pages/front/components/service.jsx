@@ -18,72 +18,42 @@ const services = [
     title: "1. Global Payment Solutions",
     description:
       "We enable seamless transfers in over 35 currencies, connecting businesses and individuals to their global partners, customers, and suppliers." ,
-    features: [
-      "Multiple payment methods (UPI, Cards, Wallets)",
-      "Real-time transaction tracking",
-      "Fraud detection and prevention",
-      "Easy reconciliation and reporting",
-    ],
+   
   },
   {
     id: "panel2",
     title: "2. Multi-Currency Accounts",
     description:
       "Accept payments in multiple currencies, while settling in your preferred currency. We take care of the conversion and compliance, so you can focus on your business.",
-    features: [
-      "Customizable financial modules",
-      "Credit and lending APIs",
-      "KYC and compliance automation",
-      "Analytics dashboard integration",
-    ],
+   
   },
   {
     id: "panel3",
     title: "3. Blockchain-Based Solutions",
     description:
       "Use of stablecoins (e.g., USDC, USDT) and blockchain platforms to reduce cost and improve settlement time.",
-    features: [
-      "Secure wallet creation and management",
-      "User balance tracking",
-      "Peer-to-peer transfers",
-      "Instant settlements",
-    ],
+
   },
   {
     id: "panel4",
     title: "4. Trade Finance Tools",
     description:
       "Export/import financing, invoice factoring, and credit insurance to reduce payment risk and improve liquidity.",
-    features: [
-      "Account opening and management",
-      "Virtual account creation",
-      "Automated reconciliation",
-      "Seamless API documentation",
-    ],
+   
   },
   {
     id: "panel5",
     title: "5. Open Banking APIs",
     description:
       "Enable seamless integration between MSME accounting software and payment platforms for better automation and reconciliation.",
-    features: [
-      "International invoicing and payments",
-      "Multi-currency accounts for businesses",
-      "Real-time payment tracking and notifications",
-      "Automated payment solutions for e-commerce",
-    ],
+   
   },
    {
     id: "panel6",
     title: "6. Payment Links",
     description:
       "Generate one-time or recurring payment links that can be sent via email, SMS, WhatsApp, or embedded on your website. No coding required. Customers can pay in a few clicks. ",
-    features: [
-      "International invoicing and payments",
-      "Multi-currency accounts for businesses",
-      "Real-time payment tracking and notifications",
-      "Automated payment solutions for e-commerce",
-    ],
+   
   },
 ];
 
@@ -196,33 +166,7 @@ const Service = () => {
                     {service.description}
                   </Typography>
 
-                  <Typography
-                    variant="subtitle1"
-                    fontWeight={700}
-                    color="#1a2b42"
-                    mb={1}
-                  >
-                    Key Features:
-                  </Typography>
-
-                  <ul style={{ marginLeft: 24, marginBottom: 0 }}>
-                    {service.features.map((feature, i) => (
-                      <li
-                        key={i}
-                        style={{
-                          color: "#f97316",
-                          marginBottom: 6,
-                          fontSize: 14.7,
-                          lineHeight: 1.65,
-                          fontWeight: 500,
-                        }}
-                      >
-                        <span style={{ color: "#5c6277", fontWeight: 400 }}>
-                          {feature}
-                        </span>
-                      </li>
-                    ))}
-                  </ul>
+                  
                 </AccordionDetails>
               </Accordion>
 
