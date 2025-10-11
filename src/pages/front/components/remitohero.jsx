@@ -1,6 +1,3 @@
-
-
-
 import React, { useState } from "react";
 import { FaArrowRight } from "react-icons/fa";
 import AnimatedNumber from "./animatenumber";
@@ -32,13 +29,21 @@ const HeroSection = () => {
       className="bg-[#fff8f2] bg-cover bg-center bg-no-repeat py-14 px-6 md:px-16 flex flex-col md:flex-row items-center justify-between gap-8 md:gap-10 min-h-[400px]"
     >
       {/* LEFT CONTENT - Increased width */}
-      <div className="w-full md:w-[65%] text-center md:text-left flex flex-col justify-center space-y-10">
-        <h1 className="font-bai font-bold text-[38px] md:text-[52px] text-[#0a2a57] leading-[108%] tracking-tight mb-2">
+      <div className="w-full md:w-[60%] text-center md:text-left flex flex-col justify-center space-y-10">
+        {/* <h1 className="font-bai font-[700] text-[34px] md:text-[64px] text-[#0a2a57] leading-[108%] tracking-tight mb-2">
           Seamless Global <br />
           Payments. Simplified for <br />
           You.{" "}
           <span className="text-yellow-500 text-[44px] md:text-[54px] align-middle pl-2 font-[700]">
             ₹<AnimatedNumber to={money.saving} />
+          </span>
+        </h1> */}
+        <h1 className="font-bai font-[700] text-[34px] md:text-[64px] text-[#0a2a57] leading-[100%] tracking-[0] mb-2">
+          Seamless Global <br />
+          Payments. Simplified for <br />
+          You.{" "}
+          <span className="text-yellow-500 text-[44px] md:text-[54px] align-middle pl-2 font-[700]">
+            ₹<AnimatedNumber to = {money.saving} />
           </span>
         </h1>
         <p className="text-gray-500 text-base md:text-lg max-w-xl mb-2">
@@ -57,7 +62,7 @@ const HeroSection = () => {
       </div>
 
       {/* RIGHT CARD - Reduced width & height */}
-      <div className="w-full md:w-[32%] bg-white rounded-2xl shadow-xl p-5 pt-6 max-h-[420px] overflow-hidden">
+      <div className="w-full md:w-[40%] bg-white rounded-2xl shadow-xl p-5 pt-6 max-h-[420px] overflow-hidden">
         <div className="flex items-center justify-between mb-4">
           <div className="w-[65%] flex flex-col items-start gap-2">
             <span className="text-gray-500 text-[14px] font-medium mb-1">

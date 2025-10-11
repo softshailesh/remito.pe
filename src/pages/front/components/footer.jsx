@@ -1,4 +1,5 @@
 import React from "react";
+import remiti_logo from "../../../assets/remitologo.svg"
 import {
   FaFacebookF,
   FaInstagram,
@@ -14,7 +15,7 @@ const Footer = () => {
         <div className="w-full lg:w-[22%] mb-8 lg:mb-0">
           {/* Replace src with your logo path */}
           <img
-            src="/logo-remitorpe.png"
+            src={remiti_logo}
             alt="Remitope Logo"
             className="h-8 mb-3"
           />
