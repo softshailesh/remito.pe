@@ -1,3 +1,6 @@
+*{
+  font-family: "Bai Jamjuree";
+}
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }
