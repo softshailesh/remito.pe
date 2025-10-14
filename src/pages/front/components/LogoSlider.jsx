@@ -24,20 +24,21 @@ const logos = [
 ];
 
 const LogoSlider = () => (
-  <div className="relative w-full bg-white border-b border-blue-100 py-3 overflow-hidden">
-    <div className="whitespace-nowrap flex animate-slide">
-      {/* Duplicate for infinite scrolling effect */}
-      {[...logos, ...logos].map((logo, i) => (
-        <img
-          key={i}
-          src={logo}
-          alt={`partner-logo-${i}`}
-          className="h-8 md:h-12 mx-8 inline-block opacity-90 object-contain"
-          style={{ width: "auto", minWidth: 110 }}
-        />
-      ))}
+  <div className="relative w-full bg-white border-b border-blue-100 py-3 w-full flex justify-center">
+    <div className="w-full max-w-[1350px] box-border px-6 md:px-10 overflow-hidden">
+      <div className="whitespace-nowrap flex animate-slide">
+        {/* Duplicate for infinite scrolling effect */}
+        {[...logos, ...logos].map((logo, i) => (
+          <img
+            key={i}
+            src={logo}
+            alt={`partner-logo-${i}`}
+            className="h-8 md:h-12 mx-8 inline-block opacity-90 object-contain"
+            style={{ width: "auto", minWidth: 110 }}
+          />
+        ))}
+      </div>
     </div>
-
     {/* Animation styles */}
     <style>{`
       @keyframes slide {

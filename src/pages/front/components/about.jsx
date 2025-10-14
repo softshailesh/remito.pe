@@ -4,7 +4,8 @@ import plane from "../../../assets/about-image.svg";
 
 const AboutSection = () => {
   return (
-    <section className="relative bg-[#EDECFD] py-16 px-4 md:px-10 lg:px-64 overflow-hidden">
+    <section className="relative bg-[#EDECFD] py-16 overflow-hidden w-full flex justify-center">
+      <div className="relative w-full max-w-[1350px] box-border px-6 md:px-10 flex justify-center">
       <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-10">
         {/* Left Image */}
         <div className="flex justify-center lg:justify-start relative">
@@ -84,6 +85,7 @@ const AboutSection = () => {
         alt="plane path"
         className="absolute bottom-8 right-52 w-[120px] md:w-[180px] lg:w-[200px] opacity-90"
       />
+      </div>
     </section>
   );
 };

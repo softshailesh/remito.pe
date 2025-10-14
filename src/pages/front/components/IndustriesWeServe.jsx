@@ -48,7 +48,8 @@ const industries = [
 
 const borderColor = "#FFFFFF"; // White border color
 const IndustriesWeServe = () => (
-  <div className="bg-[#e7e8fa] py-16 px-4 md:px-12 relative">
+  <div className="bg-[#e7e8fa] py-16 relative w-full flex justify-center">
+     <div className="w-full max-w-[1350px] box-border px-6 md:px-10">
     {/* Section Title */}
     <div className="text-center mb-12 max-w-4xl mx-auto">
       <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
@@ -154,6 +155,7 @@ const IndustriesWeServe = () => (
       className="absolute bottom-4 right-4 w-24 h-24 bg-no-repeat bg-contain"
       style={{ backgroundImage: `url(${Dots})` }}
     />
+    </div>
   </div>
 );
 

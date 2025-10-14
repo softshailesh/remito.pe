@@ -10,8 +10,9 @@ const Navbar = () => {
   const defaultLink = "hover:text-orange-500";
 
   return (
-    <header className="sticky top-0 z-50 bg-white shadow-sm relative">
-      <nav className="w-full flex items-center justify-between px-6 md:px-10 py-4">
+    <header className="sticky top-0 z-50 bg-white shadow-sm relative flex justify-center items-center w-full ">
+      <div className="w-full max-w-[1350px]">
+         <nav className="w-full flex items-center justify-between px-6 md:px-10 py-4">
         {/* Logo + Links */}
         <div className="flex items-center space-x-10">
           {/* Logo */}
@@ -209,6 +210,8 @@ const Navbar = () => {
           </ul>
         </nav>
       )}
+      </div>
+     
     </header>
   );
 };

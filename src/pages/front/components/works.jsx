@@ -50,16 +50,16 @@ const Works = () => {
   }, [hovered]);
 
   return (
-    <section className="bg-[#F5F5F5] py-16 px-6 md:px-12 lg:px-20 overflow-hidden">
-      <div className="max-w-7xl mx-auto">
+    <section className="bg-[#F5F5F5] py-16 flex justify-center overflow-hidden w-full">
+      <div className="w-full max-w-[1350px] box-border px-6 md:px-10">
         {/* Section Heading */}
         <h2 className="text-3xl md:text-4xl font-bold text-center text-slate-800 mb-12">
           How It Works
         </h2>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
           {/* Left Image */}
-          <div className="flex justify-center">
+          <div className="flex justify-start">
             <div className="border-4 border-gray-100 rounded-2xl p-3 shadow-sm h-[280px] sm:h-[440px]">
               <AnimatePresence mode="wait">
                 <motion.img
@@ -77,7 +77,7 @@ const Works = () => {
           </div>
 
           {/* Step Content */}
-          <div className="relative flex items-start">
+          <div className="relative flex items-start px-4">
             <div className=" flex-1">
               {steps.map((step, index) => (
                 <div

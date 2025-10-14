@@ -53,8 +53,8 @@ import remiti_logo from "../../../assets/remitologo.svg";
 
 const Footer = () => {
   return (
-    <footer className="bg-white border-t border-gray-100 py-10 flex flex-col justify-center">
-      <div className="container mx-auto px-6 md:px-10 lg:px-20 grid grid-cols-1 md:grid-cols-2 gap-10 max-w-[1350px] ">
+    <footer className="bg-white border-t border-gray-100 py-10 flex flex-col justify-center w-full">
+      <div className="container mx-auto px-6 md:px-10 lg:px-20 grid grid-cols-1 md:grid-cols-2 gap-10 w-full max-w-[1350px] ">
         {/* Left Section */}
         <div>
           <img src={remiti_logo} alt="RemitoPe Logo" className="h-10 mb-3" />
