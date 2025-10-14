@@ -64,7 +64,7 @@ const Navbar = () => {
             </li>
             <li>
               <NavLink
-                to="/contact"
+                to="/contact-us"
                 className={({ isActive }) =>
                   isActive ? activeLink : defaultLink
                 }

@@ -14,7 +14,6 @@ import AboutSection from "./components/about";
 const Landingpage = () => {
   return (
     <div>
-      <Navbar />
       <HeroSection />
       <LogoSlider />
       <AboutSection />
@@ -23,7 +22,6 @@ const Landingpage = () => {
       <Payment />
       <Works />
       <IndustriesWeServe />
-      <Footer />
     </div>
   );
 };
