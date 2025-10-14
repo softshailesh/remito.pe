@@ -1,205 +1,205 @@
-import React, { useState, useRef, useEffect } from "react";
-import serviceImage from "../../../assets/service.png";
-import {
-  Accordion,
-  AccordionSummary,
-  AccordionDetails,
-  Typography,
-  Box,
-  Paper,
-  Stack,
-} from "@mui/material";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import { motion } from "framer-motion";
+// import React, { useState, useRef, useEffect } from "react";
+// import serviceImage from "../../../assets/service.png";
+// import {
+//   Accordion,
+//   AccordionSummary,
+//   AccordionDetails,
+//   Typography,
+//   Box,
+//   Paper,
+//   Stack,
+// } from "@mui/material";
+// import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+// import { motion } from "framer-motion";
 
-const services = [
-  {
-    id: "panel1",
-    title: "1. Global Payment Solutions",
-    description:
-      "We enable seamless transfers in over 35 currencies, connecting businesses and individuals to their global partners, customers, and suppliers." ,
+// const services = [
+//   {
+//     id: "panel1",
+//     title: "1. Global Payment Solutions",
+//     description:
+//       "We enable seamless transfers in over 35 currencies, connecting businesses and individuals to their global partners, customers, and suppliers." ,
    
-  },
-  {
-    id: "panel2",
-    title: "2. Multi-Currency Accounts",
-    description:
-      "Accept payments in multiple currencies, while settling in your preferred currency. We take care of the conversion and compliance, so you can focus on your business.",
+//   },
+//   {
+//     id: "panel2",
+//     title: "2. Multi-Currency Accounts",
+//     description:
+//       "Accept payments in multiple currencies, while settling in your preferred currency. We take care of the conversion and compliance, so you can focus on your business.",
    
-  },
-  {
-    id: "panel3",
-    title: "3. Blockchain-Based Solutions",
-    description:
-      "Use of stablecoins (e.g., USDC, USDT) and blockchain platforms to reduce cost and improve settlement time.",
+//   },
+//   {
+//     id: "panel3",
+//     title: "3. Blockchain-Based Solutions",
+//     description:
+//       "Use of stablecoins (e.g., USDC, USDT) and blockchain platforms to reduce cost and improve settlement time.",
 
-  },
-  {
-    id: "panel4",
-    title: "4. Trade Finance Tools",
-    description:
-      "Export/import financing, invoice factoring, and credit insurance to reduce payment risk and improve liquidity.",
+//   },
+//   {
+//     id: "panel4",
+//     title: "4. Trade Finance Tools",
+//     description:
+//       "Export/import financing, invoice factoring, and credit insurance to reduce payment risk and improve liquidity.",
    
-  },
-  {
-    id: "panel5",
-    title: "5. Open Banking APIs",
-    description:
-      "Enable seamless integration between MSME accounting software and payment platforms for better automation and reconciliation.",
+//   },
+//   {
+//     id: "panel5",
+//     title: "5. Open Banking APIs",
+//     description:
+//       "Enable seamless integration between MSME accounting software and payment platforms for better automation and reconciliation.",
    
-  },
-   {
-    id: "panel6",
-    title: "6. Payment Links",
-    description:
-      "Generate one-time or recurring payment links that can be sent via email, SMS, WhatsApp, or embedded on your website. No coding required. Customers can pay in a few clicks. ",
+//   },
+//    {
+//     id: "panel6",
+//     title: "6. Payment Links",
+//     description:
+//       "Generate one-time or recurring payment links that can be sent via email, SMS, WhatsApp, or embedded on your website. No coding required. Customers can pay in a few clicks. ",
    
-  },
-];
+//   },
+// ];
 
-const accentBoxShadow = "0 12px 40px rgba(70, 100, 160, 0.10)";
-const normalBoxShadow = "0 4px 16px rgba(20,30,40,0.07)";
+// const accentBoxShadow = "0 12px 40px rgba(70, 100, 160, 0.10)";
+// const normalBoxShadow = "0 4px 16px rgba(20,30,40,0.07)";
 
-const Service = () => {
-  const [expanded, setExpanded] = useState("panel1");
-  const sectionRefs = useRef([]);
+// const Service = () => {
+//   const [expanded, setExpanded] = useState("panel1");
+//   const sectionRefs = useRef([]);
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          const panelId = entry.target.dataset.id;
-          if (entry.isIntersecting) {
-            setExpanded(panelId);
-          }
-        });
-      },
-      { threshold: 0.5 }
-    );
+//   useEffect(() => {
+//     const observer = new IntersectionObserver(
+//       (entries) => {
+//         entries.forEach((entry) => {
+//           const panelId = entry.target.dataset.id;
+//           if (entry.isIntersecting) {
+//             setExpanded(panelId);
+//           }
+//         });
+//       },
+//       { threshold: 0.5 }
+//     );
 
-    sectionRefs.current.forEach((ref) => ref && observer.observe(ref));
-    return () => observer.disconnect();
-  }, []);
+//     sectionRefs.current.forEach((ref) => ref && observer.observe(ref));
+//     return () => observer.disconnect();
+//   }, []);
 
-  return (
-    <Box
-      sx={{
-        py: { xs: 6, md: 8 },
-        px: { xs: 2, sm: 3, md: 6 },
-        bgcolor: "#fff",
-        position: "relative",
-        overflow: "hidden",
-      }}
-    >
-      <Typography
-        variant="h4"
-        align="center"
-        fontWeight={700}
-        color="#1a2b42"
-        mb={7}
-        sx={{ fontSize: { xs: 32, md: 40 }, textShadow: "0 2px 3px #f3f6fa" }}
-      >
-        Services
-      </Typography>
+//   return (
+//     <Box
+//       sx={{
+//         py: { xs: 6, md: 8 },
+//         px: { xs: 2, sm: 3, md: 6 },
+//         bgcolor: "#fff",
+//         position: "relative",
+//         overflow: "hidden",
+//       }}
+//     >
+//       <Typography
+//         variant="h4"
+//         align="center"
+//         fontWeight={700}
+//         color="#1a2b42"
+//         mb={7}
+//         sx={{ fontSize: { xs: 32, md: 40 }, textShadow: "0 2px 3px #f3f6fa" }}
+//       >
+//         Services
+//       </Typography>
 
-      <Stack alignItems="center" spacing={0}>
-        {services.map((service, index) => {
-          const isOpenBanking = service.id === "panel6";
-          const isActive = expanded === service.id;
+//       <Stack alignItems="center" spacing={0}>
+//         {services.map((service, index) => {
+//           const isOpenBanking = service.id === "panel6";
+//           const isActive = expanded === service.id;
 
-          return (
-            <motion.div
-              key={service.id}
-              ref={(el) => (sectionRefs.current[index] = el)}
-              data-id={service.id}
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.09 }}
-              viewport={{ once: true, amount: 0.3 }}
-              style={{
-                width: "100%",
-                maxWidth: "900px", // ⬅️ increased from 640px to 900px
-                position: isOpenBanking ? "relative" : "static",
-                zIndex: 5 - index,
-                marginBottom: isOpenBanking ? 0 : -32,
-              }}
-            >
-              <Accordion
-                expanded={isActive}
-                component={Paper}
-                elevation={0}
-                sx={{
-                  borderRadius: 4,
-                  mt: isOpenBanking ? 0 : 4,
-                  boxShadow: isOpenBanking ? accentBoxShadow : normalBoxShadow,
-                  bgcolor: isOpenBanking ? "#f7fafc" : "#fff",
-                  border: isOpenBanking
-                    ? "2.5px solid #dde2ea"
-                    : "1px solid #f3f6fa",
-                  p: isOpenBanking ? 3.5 : 2,
-                  transition: "all 0.25s ease",
-                }}
-              >
-                <AccordionSummary
-                  expandIcon={<ExpandMoreIcon sx={{ color: "#143869" }} />}
-                  onClick={() =>
-                    setExpanded(isActive ? null : service.id)
-                  }
-                >
-                  <Typography
-                    variant="h6"
-                    fontWeight={700}
-                    color="#143869"
-                    sx={{ fontSize: { xs: 18, md: 21 } }}
-                  >
-                    {service.title}
-                  </Typography>
-                </AccordionSummary>
+//           return (
+//             <motion.div
+//               key={service.id}
+//               ref={(el) => (sectionRefs.current[index] = el)}
+//               data-id={service.id}
+//               initial={{ opacity: 0, y: 50 }}
+//               whileInView={{ opacity: 1, y: 0 }}
+//               transition={{ duration: 0.6, delay: index * 0.09 }}
+//               viewport={{ once: true, amount: 0.3 }}
+//               style={{
+//                 width: "100%",
+//                 maxWidth: "900px", // ⬅️ increased from 640px to 900px
+//                 position: isOpenBanking ? "relative" : "static",
+//                 zIndex: 5 - index,
+//                 marginBottom: isOpenBanking ? 0 : -32,
+//               }}
+//             >
+//               <Accordion
+//                 expanded={isActive}
+//                 component={Paper}
+//                 elevation={0}
+//                 sx={{
+//                   borderRadius: 4,
+//                   mt: isOpenBanking ? 0 : 4,
+//                   boxShadow: isOpenBanking ? accentBoxShadow : normalBoxShadow,
+//                   bgcolor: isOpenBanking ? "#f7fafc" : "#fff",
+//                   border: isOpenBanking
+//                     ? "2.5px solid #dde2ea"
+//                     : "1px solid #f3f6fa",
+//                   p: isOpenBanking ? 3.5 : 2,
+//                   transition: "all 0.25s ease",
+//                 }}
+//               >
+//                 <AccordionSummary
+//                   expandIcon={<ExpandMoreIcon sx={{ color: "#143869" }} />}
+//                   onClick={() =>
+//                     setExpanded(isActive ? null : service.id)
+//                   }
+//                 >
+//                   <Typography
+//                     variant="h6"
+//                     fontWeight={700}
+//                     color="#143869"
+//                     sx={{ fontSize: { xs: 18, md: 21 } }}
+//                   >
+//                     {service.title}
+//                   </Typography>
+//                 </AccordionSummary>
 
-                <AccordionDetails>
-                  <Typography
-                    variant="body1"
-                    color="#525f72"
-                    mb={2}
-                    sx={{ fontSize: { xs: 15, md: 16 } }}
-                  >
-                    {service.description}
-                  </Typography>
+//                 <AccordionDetails>
+//                   <Typography
+//                     variant="body1"
+//                     color="#525f72"
+//                     mb={2}
+//                     sx={{ fontSize: { xs: 15, md: 16 } }}
+//                   >
+//                     {service.description}
+//                   </Typography>
 
                   
-                </AccordionDetails>
-              </Accordion>
+//                 </AccordionDetails>
+//               </Accordion>
 
-              {isOpenBanking && (
-                <Box
-                  sx={{
-                    position: "absolute",
-                    right: { xs: -28, md: -56 },
-                    bottom: { xs: -24, md: -30 },
-                    pointerEvents: "none",
-                    zIndex: 0,
-                  }}
-                >
+//               {isOpenBanking && (
+//                 <Box
+//                   sx={{
+//                     position: "absolute",
+//                     right: { xs: -28, md: -56 },
+//                     bottom: { xs: -24, md: -30 },
+//                     pointerEvents: "none",
+//                     zIndex: 0,
+//                   }}
+//                 >
                  
-                </Box>
-              )}
-            </motion.div>
-          );
-        })}
-      </Stack>
+//                 </Box>
+//               )}
+//             </motion.div>
+//           );
+//         })}
+//       </Stack>
 
-      {/* Background decorative image */}
-      <img
-        src={serviceImage}
-        alt="Coin & Robot Hand"
-        className="absolute right-0 bottom-0 w-52 md:w-60 z-10 pointer-events-none"
-        style={{ maxWidth: 280 }}
-      />
-    </Box>
-  );
-};
+//       {/* Background decorative image */}
+//       <img
+//         src={serviceImage}
+//         alt="Coin & Robot Hand"
+//         className="absolute right-0 bottom-0 w-52 md:w-60 z-10 pointer-events-none"
+//         style={{ maxWidth: 280 }}
+//       />
+//     </Box>
+//   );
+// };
 
-export default Service;
+// export default Service;
 
 
 
@@ -487,3 +487,88 @@ export default Service;
 // };
 
 // export default CardStack;
+
+import React from "react";
+import globeIcon from "../../../assets/global.svg";
+import currencyIcon from "../../../assets/card-coin.svg";
+import blockchainIcon from "../../../assets/blockchain-04.svg";
+import tradeIcon from "../../../assets/finance.svg";
+import apiIcon from "../../../assets/api.svg";
+import linkIcon from "../../../assets/payment.svg";
+
+const features = [
+  {
+    img: globeIcon,
+    title: "Global Payment Solutions",
+    description:
+      "We enable seamless transfers in over 35 currencies, connecting businesses and individuals to their global partners, customers, and suppliers.",
+  },
+  {
+    img: currencyIcon,
+    title: "Multi-Currency Accounts",
+    description:
+      "Accept payments in multiple currencies, while settling in your preferred currency. We take care of the conversion and compliance, so you can focus on your business.",
+  },
+  {
+    img: blockchainIcon,
+    title: "Blockchain-Based Solutions",
+    description:
+      "Use of stablecoins (e.g., USDC, USDT) and blockchain platforms to reduce cost and improve settlement time.",
+  },
+  {
+    img: tradeIcon,
+    title: "Trade Finance Tools",
+    description:
+      "Export/import financing, invoice factoring, and credit insurance to reduce payment risk and improve liquidity.",
+  },
+  {
+    img: apiIcon,
+    title: "Open Banking APIs",
+    description:
+      "Enable seamless integration between MSME accounting software and payment platforms for better automation and reconciliation.",
+  },
+  {
+    img: linkIcon,
+    title: "Payment Links",
+    description:
+      "Generate one-time or recurring payment links that can be sent via email, SMS, WhatsApp, or embedded on your website. No coding required.",
+  },
+];
+
+const CrossBorderPayments = () => {
+  return (
+    <section className="bg-white py-16 px-6 md:px-10">
+      <div className="max-w-7xl mx-auto text-center">
+        <h2 className="text-[46px] md:text-4xl font-[700] text-[#0A1F44] leading-snug mb-12">
+          Simplify cross-border payments <br className="hidden sm:block" /> for
+          businesses
+        </h2>
+
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {features.map((feature, index) => (
+            <div
+              key={index}
+              className="bg-[#F9FAFB] border border-gray-100 rounded-2xl p-6 text-left shadow-sm hover:shadow-md transition-all duration-200"
+            >
+              <div className="bg-[#EDECFD] inline-flex items-center justify-center w-[80px] h-[83px] rounded-full mb-4">
+                <img
+                  src={feature.img}
+                  alt={feature.title}
+                  className="w-[41px] h-[41px] object-contain"
+                />
+              </div>
+              <h3 className="text-[24px] font-[700] text-[#0A1F44] mb-2">
+                {feature.title}
+              </h3>
+              <p className="text-[#9A9A9A]  leading-relaxed text-[16px] font-[400]">
+                {feature.description}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default CrossBorderPayments;
