@@ -10,6 +10,7 @@ import LogoSlider from "./components/LogoSlider";
 import IndustriesWeServe from "./components/IndustriesWeServe";
 import Footer from "./components/footer";
 import AboutSection from "./components/about";
+import ContactForm from "./components/ContactForm";
 
 const Landingpage = () => {
   return (
@@ -24,6 +25,7 @@ const Landingpage = () => {
       <Works />
       <IndustriesWeServe />
       <Footer />
+      <ContactForm />
     </div>
   );
 };
