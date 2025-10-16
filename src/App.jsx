@@ -1,11 +1,12 @@
 import "./App.css";
-import Landingpage from "./pages/front/landingpage";
+import Allroutes from "./components/routes/Allroutes";
+
 
 function App() {
   
   return (
     <>
-   <Landingpage />
+   <Allroutes />
     </>
   );
 }

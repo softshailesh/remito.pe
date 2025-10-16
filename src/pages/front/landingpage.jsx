@@ -15,7 +15,6 @@ import ContactForm from "./components/ContactForm";
 const Landingpage = () => {
   return (
     <div>
-      <Navbar />
       <HeroSection />
       <LogoSlider />
       <AboutSection />
@@ -24,8 +23,6 @@ const Landingpage = () => {
       <Payment />
       <Works />
       <IndustriesWeServe />
-      <Footer />
-      <ContactForm />
     </div>
   );
 };
