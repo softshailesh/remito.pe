@@ -21,10 +21,10 @@ const Navbar = () => {
           </NavLink>
 
           {/* Desktop Menu */}
-          <ul className="hidden md:flex items-center space-x-8 text-[15px] font-semibold text-[#0a2a57]">
+          <ul className="hidden lg:flex items-center space-x-8 text-[15px] font-semibold text-[#0a2a57]">
             <li>
               <NavLink
-                to="/about"
+                to="#"
                 className={({ isActive }) =>
                   isActive ? activeLink : defaultLink
                 }
@@ -34,7 +34,7 @@ const Navbar = () => {
             </li>
             <li>
               <NavLink
-                to="/services"
+                to="#"
                 className={({ isActive }) =>
                   isActive ? activeLink : defaultLink
                 }
@@ -44,7 +44,7 @@ const Navbar = () => {
             </li>
             <li>
               <NavLink
-                to="/Why_RemitoPe"
+                to="#"
                 className={({ isActive }) =>
                   isActive ? activeLink : defaultLink
                 }
@@ -54,7 +54,7 @@ const Navbar = () => {
             </li>
             <li>
               <NavLink
-                to="/resources"
+                to="#"
                 className={({ isActive }) =>
                   isActive ? activeLink : defaultLink
                 }
@@ -78,22 +78,22 @@ const Navbar = () => {
         {/* Right: Sign In + LinkedIn + Mobile Toggle */}
         <div className="flex items-center space-x-4">
           <NavLink
-            to="/signin"
-            className="hidden md:block border border-yellow-400 text-yellow-500 font-medium px-6 py-2 rounded-md hover:bg-yellow-50 transition duration-300"
+            to="#"
+            className="hidden lg:block border border-yellow-400 text-yellow-500 font-medium px-6 py-2 rounded-md hover:bg-yellow-50 transition duration-300"
           >
             Sign In
           </NavLink>
 
-          <NavLink
+          {/* <NavLink
             to="/linkedin"
             className="w-[36px] h-[36px] text-[17px] flex items-center justify-center hidden md:flex border border-[#79bde0] bg-[#79bde0] text-[#007AB9] rounded-[4px] hover:bg-[#007AB9] hover:text-white transition duration-300"
           >
             <TiSocialLinkedin />
-          </NavLink>
+          </NavLink> */}
 
           {/* Mobile Toggle Button */}
           <button
-            className="md:hidden text-[#0a2a57] focus:outline-none"
+            className="lg:hidden text-[#0a2a57] focus:outline-none"
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle Menu"
           >
@@ -132,11 +132,11 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <nav className="md:hidden w-full h-0 isopen && h-fit transitionall-3s absolute z-100 bg-white border-t border-[#babdbf] shadow-sm">
+        <nav className="lg:hidden w-full h-0 isopen && h-fit transitionall-3s absolute z-100 bg-white border-t border-[#babdbf] shadow-sm">
           <ul className="flex flex-col text-[15px] font-semibold text-[#0a2a57] px-6 py-3 space-y-3">
             <li>
               <NavLink
-                to="/about"
+                to="#"
                 onClick={() => setIsOpen(false)}
                 className={({ isActive }) =>
                   isActive ? activeLink : defaultLink
@@ -147,7 +147,7 @@ const Navbar = () => {
             </li>
             <li>
               <NavLink
-                to="/services"
+                to="#"
                 onClick={() => setIsOpen(false)}
                 className={({ isActive }) =>
                   isActive ? activeLink : defaultLink
@@ -158,7 +158,7 @@ const Navbar = () => {
             </li>
             <li>
               <NavLink
-                to="/Why_RemitoPe"
+                to="#"
                 onClick={() => setIsOpen(false)}
                 className={({ isActive }) =>
                   isActive ? activeLink : defaultLink
@@ -169,7 +169,7 @@ const Navbar = () => {
             </li>
             <li>
               <NavLink
-                to="/resources"
+                to="#"
                 onClick={() => setIsOpen(false)}
                 className={({ isActive }) =>
                   isActive ? activeLink : defaultLink
@@ -180,7 +180,7 @@ const Navbar = () => {
             </li>
             <li>
               <NavLink
-                to="/contact"
+                to="/contact-us"
                 onClick={() => setIsOpen(false)}
                 className={({ isActive }) =>
                   isActive ? activeLink : defaultLink
@@ -191,7 +191,7 @@ const Navbar = () => {
             </li>
            <li className="flex items-center gap-[15px] pt-2 border-t border-[#babdbf]">
               <NavLink
-                to="/signin"
+                to="#"
                 onClick={() => setIsOpen(false)}
                 className="text-center border border-yellow-400 text-yellow-500 font-medium px-6 py-2 rounded-md hover:bg-yellow-50 transition duration-300 "
               >
@@ -199,13 +199,13 @@ const Navbar = () => {
               </NavLink>
 
               {/* Show LinkedIn button on mobile too */}
-              <NavLink
+              {/* <NavLink
                 to="/linkedin"
                 onClick={() => setIsOpen(false)}
                 className="w-[36px] h-[36px] text-[17px] flex items-center justify-center border border-[#79bde0] bg-[#79bde0] text-[#007AB9] rounded-[4px] hover:bg-[#007AB9] hover:text-white transition duration-300"
               >
                 <TiSocialLinkedin />
-              </NavLink>
+              </NavLink> */}
             </li>
           </ul>
         </nav>
