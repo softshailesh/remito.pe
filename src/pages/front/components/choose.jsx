@@ -89,7 +89,7 @@ const Choose = () => {
             <img
               src={ChooseImage}
               alt="Why Choose Us visual"
-              className=" w-full max-w-md md:max-w-lg object-cover"
+              className=" w-full  object-cover"
             />
           </div>
         </div>

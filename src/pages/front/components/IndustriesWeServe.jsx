@@ -99,10 +99,10 @@ const IndustriesWeServe = () => (
         style={{ background: borderColor }}
       />
       {/* Right border for the whole grid */}
-      <div
+      {/* <div
         className="hidden lg:block absolute right-0 top-0 bottom-0 w-[1px]"
         style={{ background: borderColor }}
-      />
+      /> */}
     </div>
 
     {/* Bottom 2 industries grid with right and bottom borders */}
@@ -137,10 +137,10 @@ const IndustriesWeServe = () => (
         style={{ background: borderColor }}
       />
       {/* Right border for the grid */}
-      <div
+      {/* <div
         className="hidden sm:block absolute right-0 top-0 bottom-0 w-[1px]"
         style={{ background: borderColor }}
-      />
+      /> */}
     </div>
 
     {/* Button */}

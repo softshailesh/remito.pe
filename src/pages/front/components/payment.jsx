@@ -52,11 +52,11 @@ const PaymentSolutions = () => {
         </p>
 
         {/* Cards */}
-        <div className="flex sm:grid sm:grid-cols-2 lg:grid-cols-3 gap-8 overflow-x-auto md:overflow-visible scroll-smooth no-scrollbar pb-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 pb-4">
           {data.map((item) => (
             <div
               key={item.id}
-              className="min-w-[260px] bg-[#EDECFD] rounded-[15px] p-8 shadow-sm hover:shadow-md transition-all duration-300 mr-8"
+              className="w-full max-w-[1350px] bg-[#EDECFD] rounded-[15px] p-8 shadow-sm hover:shadow-md transition-all duration-300 mr-8"
             >
               {/* Top: Image + ID */}
               <div className="flex justify-between items-center mb-6">
@@ -87,7 +87,7 @@ const PaymentSolutions = () => {
               <ul className="space-y-3 text-[#525F7F] leading-relaxed">
                 {item.points.map((point, index) => (
                   <li key={index} className="flex items-baseline gap-2">
-                    <span className="text-[#EB5C26] text-2xl leading-[1]">
+                    <span className="text-[#EB5C26] text-3xl leading-none">
                       •
                     </span>
                     <span className="font-[500] text-[18px]">{point}</span>

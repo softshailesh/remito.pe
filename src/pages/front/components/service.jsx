@@ -18,14 +18,14 @@
 //     title: "1. Global Payment Solutions",
 //     description:
 //       "We enable seamless transfers in over 35 currencies, connecting businesses and individuals to their global partners, customers, and suppliers." ,
-   
+
 //   },
 //   {
 //     id: "panel2",
 //     title: "2. Multi-Currency Accounts",
 //     description:
 //       "Accept payments in multiple currencies, while settling in your preferred currency. We take care of the conversion and compliance, so you can focus on your business.",
-   
+
 //   },
 //   {
 //     id: "panel3",
@@ -39,21 +39,21 @@
 //     title: "4. Trade Finance Tools",
 //     description:
 //       "Export/import financing, invoice factoring, and credit insurance to reduce payment risk and improve liquidity.",
-   
+
 //   },
 //   {
 //     id: "panel5",
 //     title: "5. Open Banking APIs",
 //     description:
 //       "Enable seamless integration between MSME accounting software and payment platforms for better automation and reconciliation.",
-   
+
 //   },
 //    {
 //     id: "panel6",
 //     title: "6. Payment Links",
 //     description:
 //       "Generate one-time or recurring payment links that can be sent via email, SMS, WhatsApp, or embedded on your website. No coding required. Customers can pay in a few clicks. ",
-   
+
 //   },
 // ];
 
@@ -166,7 +166,7 @@
 //                     {service.description}
 //                   </Typography>
 
-                  
+
 //                 </AccordionDetails>
 //               </Accordion>
 
@@ -180,7 +180,7 @@
 //                     zIndex: 0,
 //                   }}
 //                 >
-                 
+
 //                 </Box>
 //               )}
 //             </motion.div>
@@ -473,7 +473,7 @@
 //           );
 //         })}
 
-        
+
 //       </div>
 
 //       <img
@@ -539,10 +539,11 @@ const CrossBorderPayments = () => {
   return (
     <section className="bg-white py-16 px-6 md:px-10">
       <div className="max-w-7xl mx-auto text-center">
-        <h2 className="text-[46px] md:text-4xl font-[700] text-[#0A1F44] leading-snug mb-12">
+        <h2 className="text-[#0A1F44] text-[22px] sm:text-[28px] md:text-[36px] lg:text-[46px] font-[600] md:font-[700] leading-snug mb-12">
           Simplify cross-border payments <br className="hidden sm:block" /> for
           businesses
         </h2>
+
 
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {features.map((feature, index) => (

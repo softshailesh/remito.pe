@@ -57,16 +57,16 @@ const Works = () => {
           How It Works
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2   ">
           {/* Left Image */}
-          <div className="flex justify-start">
-            <div className="border-4 border-gray-100 rounded-2xl p-3 shadow-sm h-[280px] sm:h-[440px]">
+          <div className="flex justify-center md:justify-start order-1 md:order-none">
+            <div className="border-4 border-gray-100 rounded-2xl p-3 shadow-sm h-[220px] sm:h-[350px] md:h-[440px] w-full max-w-xs sm:max-w-md flex items-center justify-center bg-white">
               <AnimatePresence mode="wait">
                 <motion.img
                   key={steps[activeIndex].image}
                   src={steps[activeIndex].image}
-                  alt="How It Works Image"
-                  className="rounded-xl object-cover w-full max-w-md"
+                  alt="How It Works"
+                  className="rounded-xl object-contain w-full h-full"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -20 }}
@@ -81,38 +81,34 @@ const Works = () => {
             <div className=" flex-1">
               {steps.map((step, index) => (
                 <div
-                  onMouseOver={() =>{ setActiveIndex(index); setHovered(true);}}
+                  onMouseOver={() => { setActiveIndex(index); setHovered(true); }}
                   onMouseOut={() => setHovered(false)}
-                  className={`w-full border-l-8 pl-4 transition-all duration-700 ${
-                    index === activeIndex
+                  className={`w-full border-l-8 pl-4 transition-all duration-700 ${index === activeIndex
                       ? "border-[#EB5C26]"
                       : "border-[#E2E2E2]"
-                  }`}
+                    }`}
                 >
                   <div
                     key={index}
-                    className={`transition-all duration-700 ${
-                      index === activeIndex
+                    className={`transition-all duration-700 ${index === activeIndex
                         ? "opacity-100 translate-x-0"
                         : "opacity-50 translate-x-2"
-                    }`}
+                      }`}
                   >
                     <h3
-                      className={`text-lg font-semibold mb-2 transition-colors duration-500 ${
-                        index === activeIndex
+                      className={`text-lg font-semibold mb-2 transition-colors duration-500 ${index === activeIndex
                           ? "text-[#E65A24]"
                           : "text-slate-700"
-                      }`}
+                        }`}
                     >
                       {step.title}
                     </h3>
                     <p
-                      className={`text-sm leading-relaxed transition-colors duration-500 pb-5 border-b-[0.5px] ${
-                        index === activeIndex
-                          ? "text-gray-700"
-                          : "text-gray-500"
-                      }`}
+                      className={`text-sm leading-relaxed transition-colors duration-500 pb-5 ${index !== steps.length - 1 ? "border-b-[0.5px]" : ""
+                        } ${index === activeIndex ? "text-gray-700" : "text-gray-500"
+                        }`}
                     >
+
                       {step.description}
                     </p>
                   </div>

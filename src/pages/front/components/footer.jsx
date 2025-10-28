@@ -1,56 +1,7 @@
-// import React from "react";
-// import remiti_logo from "../../../assets/remitologo.svg";
-
-// const Footer = () => {
-//   return (
-//     <footer className="bg-white py-10 border-t border-gray-100">
-//       <div className="w-full px-4 text-center">
-//         {/* Logo */}
-//         <div className="flex justify-center mb-4">
-//           <img src={remiti_logo} alt="RemitoPe Logo" className="h-10" />
-//         </div>
-
-//         {/* Title */}
-//         {/* <h2 className="text-[#0B153C] text-lg font-semibold mb-2">
-//           Lorem ipsum dolor sit
-//         </h2> */}
-
-//         {/* Description */}
-//         <p className="text-gray-400 text-sm leading-relaxed max-w-2xl mx-auto mb-8">
-//           Remito.Pe is to make cross-border payments easier for people and
-//           companies worldwide. We make international financial transactions easy
-//           and accessible to everyone by prioritizing security, speed, and price.
-//         </p>
-
-//         {/* Bottom Section */}
-//         <div className="flex flex-col md:flex-row justify-between  text-gray-400 text-sm border-t border-gray-100 pt-6">
-//           <p className="mb-2 md:mb-0">
-//             Copyright{" "}
-//             <span className="text-orange-500 font-medium">@remitope</span>. All
-//             Rights Reserved.
-//           </p>
-
-//           <div className="flex space-x-4">
-//             <a href="#" className="hover:text-orange-500 transition">
-//               Privacy Policy
-//             </a>
-//             <span>|</span>
-//             <a href="#" className="hover:text-orange-500 transition">
-//               Terms & Conditions
-//             </a>
-//           </div>
-//         </div>
-//       </div>
-//     </footer>
-//   );
-// };
-
-// export default Footer;
-
 import React from "react";
 import { FaFacebookF, FaLinkedinIn } from "react-icons/fa";
 import remiti_logo from "../../../assets/remitologo.svg";
-
+import { NavLink } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -80,14 +31,22 @@ const Footer = () => {
             </h3>
             <ul className="space-y-2 text-[16px] text-[#1D3458] font-[600]">
               <li>
-                <a href="#" className="hover:text-orange-500 transition">
+                <a href="/contact-us" className="hover:text-orange-500 transition">
                   Contact Us
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-orange-500 transition">
+                {/* <a href="#" className="hover:text-orange-500 transition">
                   Sign In
-                </a>
+                </a> */}
+                
+                <NavLink
+                  to="#"
+                  onClick={() => window.location.href = "https://portal.remito.pe/"}
+                  className="hover:text-orange-500 transition"
+                >
+                  Sign In
+                </NavLink>
               </li>
               <li>
                 <a href="/privacy-policy" className="hover:text-orange-500 transition">
@@ -113,13 +72,15 @@ const Footer = () => {
             </h3>
             <div className="flex space-x-4  ">
               <a
-                href="#"
+                href="https://www.facebook.com/profile.php?id=61580295502746"
+                target="_blank"
                 className="w-8 h-8 rounded-full bg-[#1877F2] text-white flex items-center justify-center hover:bg-orange-500 transition"
               >
                 <FaFacebookF size={14} />
               </a>
               <a
-                href="#"
+                href="https://www.linkedin.com/company/remito-pe"
+                target="_blank"
                 className="w-8 h-8 rounded-full bg-[#1877F2] text-white flex items-center justify-center hover:bg-orange-500 transition"
               >
                 <FaLinkedinIn size={14} />

@@ -12,7 +12,7 @@ const AboutSection = () => {
             <img
               src={aboutImage}
               alt="About Remito.Pe"
-              className="w-full max-w-[480px] object-cover rounded-xl z-10"
+              className="w-full max-w-[580px] object-cover rounded-xl z-10"
             />
 
             {/* Optional: orange dotted background effect (behind image) */}
@@ -29,10 +29,19 @@ const AboutSection = () => {
               <div className="h-[6px] w-5 bg-[#EB5C26] rounded-full"></div>
             </div>
 
-            <h2 className="text-[#0B153C] text-[48px] md:text-4xl font-[700] leading-snug mb-6">
+            {/* <h2 className="text-[#0B153C] text-[48px]  md:text-[38px] sm:text-[26px] lg:text-[28px] font-[700] leading-snug mb-6">
               Simplifying Global Payments, <br className="hidden md:block" />
               Empowering Global Growth
-            </h2>
+            </h2> */}
+            {/* <h2 className="text-[#0B153C] text-[48px] sm:text-[36px] md:text-4xl lg:text-[38px] font-[700] leading-snug mb-6">
+              Simplifying Global Payments, <br className="hidden md:block" />
+              Empowering Global Growth
+            </h2> */}
+            <h2 className="text-[#0B153C] text-[28px] sm:text-[36px] md:text-4xl lg:text-[38px] font-[700] leading-snug mb-6">
+  Simplifying Global Payments, <br className="hidden md:block" />
+  Empowering Global Growth
+</h2>
+
 
             <p className="text-[#525F7F] text-[16px] md:text-base leading-relaxed mb-4 font-[400]">
               At <span className="font-semibold text-[#0B153C]">Remito.Pe</span>
@@ -92,8 +101,9 @@ const AboutSection = () => {
         <img
           src={plane}
           alt="plane path"
-          className="absolute bottom-0 right-8 w-[120px] md:w-[180px] lg:w-[200px] opacity-90"
+          className="hidden md:block absolute bottom-0 right-8 w-[120px] md:w-[180px] lg:w-[200px] opacity-90"
         />
+
       </div>
     </section>
   );
