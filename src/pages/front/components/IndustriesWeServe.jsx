@@ -1,10 +1,10 @@
 import React from "react"; 
-import ECommerceImg from "../../../assets/ind1.svg";
-import FreelancersImg from "../../../assets/ind2.svg";
-import MSMEImg from "../../../assets/ind3.svg";
-import TravelImg from "../../../assets/ind4.svg";
-import PaymentImg from "../../../assets/ind5.svg";
-import ImportExportImg from "../../../assets/ind6.svg";
+import ECommerceImg from "../../../assets/E-Commerce.svg";
+import FreelancersImg from "../../../assets/Freelancers.svg";
+import MSMEImg from "../../../assets/MSME’s.svg";
+import TravelImg from "../../../assets/Travel.svg";
+import PaymentImg from "../../../assets/Software.svg";
+import ImportExportImg from "../../../assets/Import.svg";
 import Dots from "../../../assets/dote.png";
 
 const industries = [
@@ -34,9 +34,9 @@ const industries = [
   },
   {
     icon: PaymentImg,
-    title: "Payment System",
+    title: "Software and Consultancy",
     description:
-      "Whether you’re buying or selling internationally, our platform simplifies cross-border payments for your business.",
+      "Payments to these partners can be made securely using cross-border svices and enabling low-cost payroll.",
   },
   {
     icon: ImportExportImg,
@@ -55,7 +55,7 @@ const IndustriesWeServe = () => (
       <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
         Industries We Serve
       </h2>
-      <p className="text-gray-500 text-sm md:text-base">
+      <p className="text-gray-500 text-sm md:text-base px-9 ">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
         incididunt Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt
@@ -79,17 +79,17 @@ const IndustriesWeServe = () => (
                   : "none",
             }}
           >
-            <div className="flex justify-center items-center w-16 h-16 mb-4 bg-white rounded-lg shadow-sm">
+            <div className="flex justify-center items-center w-[70px] h-[60px] mb-4 ">
               <img
                 src={item.icon}
                 alt={item.title}
                 className="w-10 h-10 object-contain"
               />
             </div>
-            <h3 className="text-lg font-semibold text-gray-800 mb-2">
+            <h3 className="text-[20px] font-[700] text-gray-800 mb-2 whitespace-nowrap">
               {item.title}
             </h3>
-            <p className="text-gray-500 text-sm">{item.description}</p>
+            <p className="text-[16px] font-[400] text-[#9A9A9A] text-sm">{item.description}</p>
           </div>
         ))}
       </div>
@@ -99,14 +99,14 @@ const IndustriesWeServe = () => (
         style={{ background: borderColor }}
       />
       {/* Right border for the whole grid */}
-      <div
+      {/* <div
         className="hidden lg:block absolute right-0 top-0 bottom-0 w-[1px]"
         style={{ background: borderColor }}
-      />
+      /> */}
     </div>
 
     {/* Bottom 2 industries grid with right and bottom borders */}
-    <div className="relative max-w-4xl mx-auto ">
+    <div className="relative max-w-2xl mx-auto ">
       <div className="grid grid-cols-1 sm:grid-cols-2">
         {industries.slice(4).map((item, index) => (
           <div
@@ -117,17 +117,17 @@ const IndustriesWeServe = () => (
               borderBottom: `1px solid ${borderColor}`,
             }}
           >
-            <div className="flex justify-center items-center w-16 h-16 mb-4 bg-white rounded-lg shadow-sm">
+            <div className="flex justify-center items-center w-[70px] h-[60px] mb-4  ">
               <img
                 src={item.icon}
                 alt={item.title}
                 className="w-10 h-10 object-contain"
               />
             </div>
-            <h3 className="text-lg font-semibold text-gray-800 mb-2">
+            <h3 className="text-[20px] font-[700] text-gray-800 mb-2">
               {item.title}
             </h3>
-            <p className="text-gray-500 text-sm">{item.description}</p>
+            <p className=" text-[16px] font-[400] text-[#9A9A9A] text-sm">{item.description}</p>
           </div>
         ))}
       </div>
@@ -137,15 +137,17 @@ const IndustriesWeServe = () => (
         style={{ background: borderColor }}
       />
       {/* Right border for the grid */}
-      <div
+      {/* <div
         className="hidden sm:block absolute right-0 top-0 bottom-0 w-[1px]"
         style={{ background: borderColor }}
-      />
+      /> */}
     </div>
 
     {/* Button */}
     <div className="flex justify-center mt-12">
-      <button className="bg-orange-100 text-orange-600 font-semibold px-6 py-3 rounded-md hover:bg-orange-200 transition">
+      <button className="bg-[#EB5C2626] text-[#EB5C26] font-[500] text-[18px] px-10 py-3 rounded-md cursor-pointer"
+       onClick={() => window.open("https://portal.remito.pe/", "_blank")}
+      >
         Get Started Today
       </button>
     </div>

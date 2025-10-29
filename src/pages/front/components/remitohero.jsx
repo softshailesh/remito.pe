@@ -26,28 +26,32 @@ const HeroSection = () => {
   return (
     <section
       style={{ backgroundImage: `url(${remito_hero})` }}
-      className="bg-[#fff8f2] bg-cover bg-center bg-no-repeat py-14  min-h-[400px] w-full flex justify-center items-center relative"
+      className="bg-[#fff8f2] bg-cover bg-center bg-no-repeat py-14  min-h-[600px] w-full flex justify-center items-center relative"
     >
       <div className="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-10 w-full max-w-[1350px] px-6 md:px-10 box-border">
-        <div className="w-full md:w-[60%] text-center md:text-left flex flex-col justify-center space-y-10">
-          <h1 className="font-bai font-[700] text-[34px] md:text-[64px] text-[#0a2a57] leading-[100%] tracking-[0] mb-2">
+        <div className="w-full md:w-[70%] text-center md:text-left flex flex-col justify-center space-y-10">
+          <h1 className="font-bai font-[700] text-[22px] sm:text-[28px] md:text-[48px] lg:text-[64px] text-[#0a2a57] leading-[110%] tracking-[0] mb-2">
             Seamless Global <br />
-            Payments. Simplified for <br />
-            You.{" "}
-            <span className="text-yellow-500 text-[44px] md:text-[54px] align-middle pl-2 font-[700]">
+            Payments. Simplified for You.
+            <span className="text-yellow-500 text-[30px] sm:text-[36px] md:text-[48px] lg:text-[54px] align-middle pl-2 font-[700]">
               ₹<AnimatedNumber to={money.saving} />
             </span>
           </h1>
-          <p className="text-gray-500 text-base md:text-lg max-w-xl mb-2">
+
+          <p className="text-gray-500 text-[18px] md:text-lg max-w-3xl mb-2 mt-4 font-[400] ">
             Expand your business, streamline your operations, and connect with
             the world through secure, fast, and reliable cross-border payment
             solutions.
           </p>
-          <div className="flex flex-col sm:flex-row items-center gap-4 pt-2">
-            <button className="flex items-center justify-center gap-2 bg-yellow-100 text-yellow-600 font-medium px-6 py-3 rounded-md hover:bg-yellow-200 transition w-full sm:w-auto">
+          <div className="flex flex-col sm:flex-row items-center gap-4 pt-2 mt-4">
+            <button
+            onClick={() => window.open("https://portal.remito.pe/", "_blank")}
+             className="flex items-center justify-center gap-2 bg-[#FBB81F26] text-[#FBB81F]  cursor-pointer font-medium px-10 py-3 rounded-md hover:bg-yellow-200 transition w-full sm:w-auto">
               Get started <FaArrowRight className="text-sm" />
             </button>
-            <button className="border border-orange-300 text-orange-400 font-medium px-6 py-3 rounded-md hover:bg-orange-50 transition w-full sm:w-auto">
+            <button
+            onClick={() => window.open("https://portal.remito.pe/", "_blank")}
+             className="border border-orange-300 text-[#EB5C26] font-medium px-10 py-3 rounded-md cursor-pointer hover:bg-orange-50 transition w-full sm:w-auto bg-[#EB5C2626]">
               Book for demo
             </button>
           </div>

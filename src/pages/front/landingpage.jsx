@@ -1,28 +1,52 @@
-import Navbar from "./components/header";
-import HeroSection from "./components/remitohero";
 import React from "react";
-import Header from "./components/header";
+import HeroSection from "./components/remitohero";
 import Payment from "./components/payment";
 import Service from "./components/service";
 import Choose from "./components/choose";
 import Works from "./components/works";
 import LogoSlider from "./components/LogoSlider";
 import IndustriesWeServe from "./components/IndustriesWeServe";
-import Footer from "./components/footer";
 import AboutSection from "./components/about";
-import ContactForm from "./components/ContactForm";
+
+// Import the Navbar
+// import Navbar from "./components/Navbar";
 
 const Landingpage = () => {
   return (
-    <div>
+    <div className="w-full">
+      {/* Navbar */}
+      {/* <Navbar /> */}
+
+      {/* Hero Section */}
       <HeroSection />
+
+      {/* Logo Slider */}
       <LogoSlider />
-      <AboutSection />
-      <Service />
-      <Choose />
-      <Payment />
-      <Works />
-      <IndustriesWeServe />
+
+      {/* Scrollable Sections */}
+      <section id="about">
+        <AboutSection />
+      </section>
+
+      <section id="services">
+        <Service />
+      </section>
+
+      <section id="why-remitope">
+        <Choose />
+      </section>
+
+      <section id="payment">
+        <Payment />
+      </section>
+
+      <section id="works">
+        <Works />
+      </section>
+
+      <section id="industries">
+        <IndustriesWeServe />
+      </section>
     </div>
   );
 };

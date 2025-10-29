@@ -12,11 +12,11 @@ const Allroutes = () => {
       <Route element={<PublicRoute />}>
         <Route path="/" element={<Landingpage />} />
         <Route path="/contact-us" element={<ContactUs />} />
-        {/* <Route path="/terms-conditions" element={<TermsConditions />} />
-        <Route path="/privacy-policy" element={<PrivacyPolicy />} /> */}
+        <Route path="/terms-conditions" element={<TermsConditions />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
       </Route>
-      <Route path="/terms-conditions" element={<TermsConditions />} />
-      <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+      {/* <Route path="/terms-conditions" element={<TermsConditions />} />
+      <Route path="/privacy-policy" element={<PrivacyPolicy />} /> */}
     </Routes>
   );
 };

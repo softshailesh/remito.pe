@@ -248,7 +248,7 @@ const ContactForm = () => {
                 onClick={() => setSelectedType(type)}
                 className={`px-5 py-2.5 rounded-full border text-sm md:text-base font-medium transition-all duration-200 ${
                   selectedType === type
-                    ? "bg-indigo-50 border-indigo-600 text-indigo-600"
+                    ? "bg-[#EB5C2626] border-[#CFCFCF] text-black"
                     : "border-gray-300 text-gray-700 hover:bg-gray-50"
                 }`}
               >
@@ -338,7 +338,7 @@ const ContactForm = () => {
             <p>
               By submitting this form, you agree to be contacted by our team. We
               respect your privacy; please read our{" "}
-              <a href="#" className="text-indigo-600 underline">
+              <a href="/privacy-policy" className="text-indigo-600 underline">
                 Privacy Policy
               </a>
               . If you wish to opt out of future communications, please let us
