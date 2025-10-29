@@ -1,10 +1,10 @@
 import React from "react";
 import ChooseImage from "../../../assets/chooseus.webp";
-import EasyIcon from "../../../assets/icon1.svg";
-import SecurityIcon from "../../../assets/icon2.svg";
-import PricingIcon from "../../../assets/icon3.svg";
-import SupportIcon from "../../../assets/icon4.svg";
-import TransparentIcon from "../../../assets/icon5.svg";
+import EasyIcon from "../../../assets/Easy_to_Use_Platform.svg";
+import SecurityIcon from "../../../assets/Security_You_Can_Trust.svg";
+import PricingIcon from "../../../assets/Affordable_Pricing.svg";
+import SupportIcon from "../../../assets/Dedicated_Support.svg";
+import TransparentIcon from "../../../assets/Transparent.svg";
 
 const Choose = () => {
   const features = [
@@ -48,7 +48,7 @@ const Choose = () => {
   return (
     <section className="bg-gray-50 py-16 flex justify-center w-full">
       <div className="w-full max-w-[1350px] box-border px-6 md:px-10 flex flex-col items-center">
-        <h2 className="text-3xl md:text-4xl font-bold text-center text-slate-800 mb-8">
+        <h2 className="text-[46px] md:text-4xl font-[700] text-center text-slate-800 mb-8">
           Why Choose Us?
         </h2>
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
@@ -63,12 +63,12 @@ const Choose = () => {
                   {/* Icon with inline background color */}
                   <div
                     className="shrink-0 rounded-lg p-3 flex items-center justify-center"
-                    style={{ backgroundColor: feature.bgColor }}
+                    
                   >
                     <img
                       src={feature.icon}
                       alt={feature.title}
-                      className="w-8 h-8 object-contain"
+                      className="w-[70px] h-[60px] object-contain"
                     />
                   </div>
                   <div>

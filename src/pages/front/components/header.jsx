@@ -55,14 +55,14 @@ const Navbar = () => {
                   Why RemitoPe
                 </button>
               </li>
-              <li>
+              {/* <li>
                 <button
                   onClick={() => scrollToSection("industries")}
                   className={defaultLink}
                 >
                   Resources
                 </button>
-              </li>
+              </li> */}
               <li>
                 <NavLink
                   to="/contact-us"
@@ -77,14 +77,16 @@ const Navbar = () => {
           </div>
 
           {/* Right: Sign In + LinkedIn + Mobile Toggle */}
-          <div className="flex items-center space-x-4">
+          <div className="flex items-center ">
             {/* Sign In */}
             <button
-              onClick={() => (window.location.href = "https://portal.remito.pe/")}
-              className="hidden lg:block border border-yellow-400 text-yellow-500 font-medium px-6 py-2 rounded-md hover:bg-yellow-50 transition duration-300"
+              onClick={() => window.open("https://portal.remito.pe/", "_blank")}
+              className="hidden lg:block border border-yellow-400 text-yellow-500 font-medium px-6 py-2 rounded-md hover:bg-yellow-50 transition duration-300 cursor-pointer"
             >
               Sign In
             </button>
+
+
 
             {/* Mobile Toggle */}
             <button
@@ -176,12 +178,13 @@ const Navbar = () => {
                 <button
                   onClick={() => {
                     setIsOpen(false);
-                    window.location.href = "https://portal.remito.pe/";
+                    window.open("https://portal.remito.pe/", "_blank");
                   }}
-                  className="text-center border border-yellow-400 text-yellow-500 font-medium px-6 py-2 rounded-md hover:bg-yellow-50 transition duration-300"
+                  className="text-center border border-yellow-400 text-yellow-500 font-medium px-6 py-2 rounded-md hover:bg-yellow-50 transition duration-300 cursor-pointer"
                 >
                   Sign In
                 </button>
+
               </li>
             </ul>
           </nav>

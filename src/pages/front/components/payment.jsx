@@ -1,7 +1,7 @@
 import React from "react";
-import bussinessImage from "../../../assets/bussiness.svg";
-import individualImage from "../../../assets/individual.svg";
-import msmeImage from "../../../assets/msme.svg";
+import bussinessImage from "../../../assets/Businesses.svg";
+import individualImage from "../../../assets/Individuals.svg";
+import msmeImage from "../../../assets/MSME.svg";
 
 const PaymentSolutions = () => {
   const data = [
@@ -52,19 +52,19 @@ const PaymentSolutions = () => {
         </p>
 
         {/* Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 pb-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 pb-4">
           {data.map((item) => (
             <div
               key={item.id}
               className="w-full max-w-[1350px] bg-[#EDECFD] rounded-[15px] p-8 shadow-sm hover:shadow-md transition-all duration-300 mr-8"
             >
               {/* Top: Image + ID */}
-              <div className="flex justify-between items-center mb-6">
-                <div className="bg-[#FFFFFF] w-14 h-14 rounded-xl flex items-center justify-center overflow-hidden">
+              <div className="flex justify-between items-center mb-1">
+                <div className=" w-14 h-14 rounded-xl flex items-center justify-center overflow-hidden">
                   <img
                     src={item.image}
                     alt={item.title}
-                    className="w-9 h-10 object-cover"
+                    className="w-[70px] h-[60px] object-cover"
                   />
                 </div>
                 <span className="text-[rgba(29,52,88,0.4)] text-[48px] font-[700]">
@@ -84,7 +84,7 @@ const PaymentSolutions = () => {
               </div>
 
               {/* Bullet Points */}
-              <ul className="space-y-3 text-[#525F7F] leading-relaxed">
+              <ul className="space-y-0 text-[#525F7F] leading-relaxed">
                 {item.points.map((point, index) => (
                   <li key={index} className="flex items-baseline gap-2">
                     <span className="text-[#EB5C26] text-3xl leading-none">

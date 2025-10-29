@@ -74,14 +74,14 @@ const Footer = () => {
               <a
                 href="https://www.facebook.com/profile.php?id=61580295502746"
                 target="_blank"
-                className="w-8 h-8 rounded-full bg-[#1877F2] text-white flex items-center justify-center hover:bg-orange-500 transition"
+                className="w-8 h-8 rounded-full bg-[#1877F2] text-[#FFFFFF] flex items-center justify-center hover:bg-orange-500 transition"
               >
-                <FaFacebookF size={14} />
+                <FaFacebookF size={14}  />
               </a>
               <a
                 href="https://www.linkedin.com/company/remito-pe"
                 target="_blank"
-                className="w-8 h-8 rounded-full bg-[#1877F2] text-white flex items-center justify-center hover:bg-orange-500 transition"
+                className="w-8 h-8 rounded-full bg-[#007AB9] text-[#F1F2F2] flex items-center justify-center hover:bg-orange-500 transition"
               >
                 <FaLinkedinIn size={14} />
               </a>

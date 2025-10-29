@@ -35,7 +35,7 @@ const LogoSlider = () => (
   <div className="relative w-full bg-white border-b border-blue-100 py-4 flex justify-center">
     <div className="w-full max-w-[1350px] box-border px-6 md:px-10 overflow-hidden">
       <div className="whitespace-nowrap flex animate-slide">
-        {[...logos].map((logo, i) => (
+        {[...logos , ...logos  , ...logos ].map((logo, i) => (
           <img
             key={i}
             src={logo}
@@ -55,7 +55,7 @@ const LogoSlider = () => (
     <style>{`
       @keyframes slide {
         0% { transform: translateX(0%); }
-        100% { transform: translateX(-50%); }
+        100% { transform: translateX(-100%); }
       }
       .animate-slide {
         animation: slide ${SLIDE_SPEED}s linear infinite;

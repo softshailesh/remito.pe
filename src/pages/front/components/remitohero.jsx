@@ -26,7 +26,7 @@ const HeroSection = () => {
   return (
     <section
       style={{ backgroundImage: `url(${remito_hero})` }}
-      className="bg-[#fff8f2] bg-cover bg-center bg-no-repeat py-14  min-h-[400px] w-full flex justify-center items-center relative"
+      className="bg-[#fff8f2] bg-cover bg-center bg-no-repeat py-14  min-h-[600px] w-full flex justify-center items-center relative"
     >
       <div className="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-10 w-full max-w-[1350px] px-6 md:px-10 box-border">
         <div className="w-full md:w-[70%] text-center md:text-left flex flex-col justify-center space-y-10">

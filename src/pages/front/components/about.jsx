@@ -1,5 +1,5 @@
 import React from "react";
-import aboutImage from "../../../assets/about-globe.webp"; // replace with your actual image path
+import aboutImage from "../../../assets/About.jpg"; // replace with your actual image path
 import plane from "../../../assets/about-image.svg";
 
 const AboutSection = () => {

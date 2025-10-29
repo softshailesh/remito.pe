@@ -1,9 +1,9 @@
 
 import React, { useEffect, useState } from "react";
-import free_trial from "../../../assets/free-trial.webp";
-import man_billing from "../../../assets/man-billing.webp";
-import private_mode from "../../../assets/private-mode.webp";
-import wire_transfer from "../../../assets/wire-transfer.webp";
+import free_trial from "../../../assets/Sign_Up.jpg";
+import man_billing from "../../../assets/Receive_Payments.jpg";
+import private_mode from "../../../assets/Transaction.jpg";
+import wire_transfer from "../../../assets/Secure_Transfers.jpg";
 import { motion, AnimatePresence } from "framer-motion";
 
 const Works = () => {
@@ -51,22 +51,22 @@ const Works = () => {
 
   return (
     <section className="bg-[#F5F5F5] py-16 flex justify-center overflow-hidden w-full">
-      <div className="w-full max-w-[1350px] box-border px-6 md:px-10">
+      <div className="w-full max-w-[1350px] box-border px-10 md:px-10">
         {/* Section Heading */}
         <h2 className="text-3xl md:text-4xl font-bold text-center text-slate-800 mb-12">
           How It Works
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2   ">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16">
           {/* Left Image */}
-          <div className="flex justify-center md:justify-start order-1 md:order-none">
-            <div className="border-4 border-gray-100 rounded-2xl p-3 shadow-sm h-[220px] sm:h-[350px] md:h-[440px] w-full max-w-xs sm:max-w-md flex items-center justify-center bg-white">
+          <div className="flex justify-center md:justify-end mb-10 md:mb-0">
+            <div className="flex justify-center md:justify-start order-1 md:order-none min-h-[460px] max-h-[460px] bg-white p-[27px] rounded-[10px] shadow-sm">
               <AnimatePresence mode="wait">
                 <motion.img
                   key={steps[activeIndex].image}
                   src={steps[activeIndex].image}
                   alt="How It Works"
-                  className="rounded-xl object-contain w-full h-full"
+                  className="border-2 border-gray-100 rounded-[10px] shadow-sm w-full h-full flex items-center justify-center overflow-hidden"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -20 }}
