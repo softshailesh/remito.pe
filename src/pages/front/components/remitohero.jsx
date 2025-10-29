@@ -44,10 +44,14 @@ const HeroSection = () => {
             solutions.
           </p>
           <div className="flex flex-col sm:flex-row items-center gap-4 pt-2 mt-4">
-            <button className="flex items-center justify-center gap-2 bg-[#FBB81F26] text-[#FBB81F] font-medium px-10 py-3 rounded-md hover:bg-yellow-200 transition w-full sm:w-auto">
+            <button
+            onClick={() => window.open("https://portal.remito.pe/", "_blank")}
+             className="flex items-center justify-center gap-2 bg-[#FBB81F26] text-[#FBB81F]  cursor-pointer font-medium px-10 py-3 rounded-md hover:bg-yellow-200 transition w-full sm:w-auto">
               Get started <FaArrowRight className="text-sm" />
             </button>
-            <button className="border border-orange-300 text-[#EB5C26] font-medium px-10 py-3 rounded-md hover:bg-orange-50 transition w-full sm:w-auto bg-[#EB5C2626]">
+            <button
+            onClick={() => window.open("https://portal.remito.pe/", "_blank")}
+             className="border border-orange-300 text-[#EB5C26] font-medium px-10 py-3 rounded-md cursor-pointer hover:bg-orange-50 transition w-full sm:w-auto bg-[#EB5C2626]">
               Book for demo
             </button>
           </div>
