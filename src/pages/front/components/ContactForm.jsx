@@ -226,7 +226,7 @@ const ContactForm = () => {
 
   return (
     <div className="w-full  bg-gray-50 flex items-center justify-center p-6">
-      <div className="w-full max-w-[1350px] bg-white rounded-2xl shadow-sm p-6 md:p-10 border border-gray-200 box-border">
+      <div className="w-full max-w-[1300px] bg-white rounded-2xl shadow-sm p-6 md:p-10 border border-gray-200 box-border">
         {/* Heading */}
         <h2 className="text-2xl md:text-3xl font-semibold text-gray-900">
           How Can We Help You Today?

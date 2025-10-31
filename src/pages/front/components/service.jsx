@@ -49,7 +49,7 @@ const CrossBorderPayments = () => {
   return (
     <section className="bg-white py-16 px-6 md:px-10">
       <div className="max-w-7xl mx-auto text-center">
-        <h2 className="text-[#0A1F44] text-[22px] sm:text-[28px] md:text-[36px] lg:text-[46px] font-[600] md:font-[700] leading-snug mb-12">
+        <h2 className="text-[#0A1F44] text-[26px] sm:text-[28px] md:text-[36px] lg:text-[46px] font-[700] md:font-[700] leading-snug mb-12">
           Simplify cross-border payments <br className="hidden sm:block" /> for
           businesses
         </h2>
@@ -68,7 +68,7 @@ const CrossBorderPayments = () => {
                   className="w-[70px] h-[60px] object-contain"
                 />
               </div>
-              <h3 className="text-[24px] font-[700] text-[#0A1F44] mb-2">
+              <h3 className="text-[22px] font-[700] text-[#0A1F44] mb-2">
                 {feature.title}
               </h3>
               <p className="text-[#9A9A9A]  leading-relaxed text-[16px] font-[400]">

@@ -42,7 +42,7 @@ const PaymentSolutions = () => {
     <section className="bg-white py-16 w-full flex justify-center">
       <div className="w-full max-w-[1350px] box-border px-6 md:px-10">
         {/* Heading Section */}
-        <h2 className="text-3xl md:text-4xl font-bold text-center text-[#0b153c] mb-4">
+        <h2 className="text-[26px] sm:text-[28px] md:text-[36px] lg:text-[46px] font-[700] md:font-[700] md:font-[700] text-center text-[#0b153c] mb-4">
           Quick, Secure and Easy Payments <br className="hidden md:block" />
           Anytime, Anywhere
         </h2>
@@ -64,7 +64,7 @@ const PaymentSolutions = () => {
                   <img
                     src={item.image}
                     alt={item.title}
-                    className="w-[70px] h-[60px] object-cover"
+                    className="w-[70px] h-[60px] object-contain"
                   />
                 </div>
                 <span className="text-[rgba(29,52,88,0.4)] text-[48px] font-[700]">
@@ -73,7 +73,7 @@ const PaymentSolutions = () => {
               </div>
 
               {/* Title */}
-              <h3 className="text-[36px] font-[700] text-[#0b153c] mb-1">
+              <h3 className="text-[22px] font-[700] text-[#0b153c] mb-1">
                 {item.title}
               </h3>
 

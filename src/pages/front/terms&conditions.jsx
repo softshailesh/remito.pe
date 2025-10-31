@@ -4,7 +4,7 @@ const TermsConditions = () => {
   return (
     <div className="w-full bg-gray-50 py-12 px-6 md:px-16 lg:px-32 text-gray-800">
       <div className="max-w-5xl mx-auto bg-white shadow-sm rounded-2xl p-8 md:p-12">
-        <h1 className="text-3xl md:text-4xl font-bold text-center text-indigo-700 mb-6">
+        <h1 className="text-3xl md:text-4xl font-bold text-center text-[#EB5C26] mb-6">
           Terms and Conditions
         </h1>
         <p className="text-sm text-gray-500 text-center mb-10">
@@ -15,10 +15,10 @@ const TermsConditions = () => {
           <section>
             <p>
               Welcome to <strong>Remito.Pe</strong> ("we", "our", or "us"). By
-              accessing and using our website{" "}
-              <a href="https://www.remito.pe" className="text-indigo-600 underline">
+              accessing and using our website{" "}  www.remito.pe {" "}
+              {/* <a href="https://www.remito.pe" className="text-indigo-600 underline">
                 www.remito.pe
-              </a>{" "}
+              </a>{" "} */}
               ("Website") or any services provided by Remito.Pe (the "Services"),
               you agree to be bound by the following terms and conditions
               ("Terms"). If you do not agree with these Terms, please do not use
@@ -27,7 +27,7 @@ const TermsConditions = () => {
           </section>
 
           <section>
-            <h2 className="text-xl font-semibold text-indigo-700 mb-2">
+            <h2 className="text-xl font-semibold text-[#EB5C26] mb-2">
               1. Acceptance of Terms
             </h2>
             <p>
@@ -39,7 +39,7 @@ const TermsConditions = () => {
           </section>
 
           <section>
-            <h2 className="text-xl font-semibold text-indigo-700 mb-2">
+            <h2 className="text-xl font-semibold text-[#EB5C26] mb-2">
               2. Services Provided
             </h2>
             <p>
@@ -52,7 +52,7 @@ const TermsConditions = () => {
           </section>
 
           <section>
-            <h2 className="text-xl font-semibold text-indigo-700 mb-2">
+            <h2 className="text-xl font-semibold text-[#EB5C26] mb-2">
               3. Eligibility
             </h2>
             <p>To use the Site and Services, you must:</p>
@@ -73,7 +73,7 @@ const TermsConditions = () => {
           </section>
 
           <section>
-            <h2 className="text-xl font-semibold text-indigo-700 mb-2">
+            <h2 className="text-xl font-semibold text-[#EB5C26] mb-2">
               4. Account Registration
             </h2>
             <p>
@@ -88,7 +88,7 @@ const TermsConditions = () => {
             <p className="mt-2">
               If you suspect any unauthorized access to your account, you must
               immediately notify us at{" "}
-              <a href="mailto:support@remito.pe" className="text-indigo-600 underline">
+              <a href="mailto:support@remito.pe" className="text-[#EB5C26] underline">
                 support@remito.pe
               </a>
               .
@@ -96,7 +96,7 @@ const TermsConditions = () => {
           </section>
 
           <section>
-            <h2 className="text-xl font-semibold text-indigo-700 mb-2">
+            <h2 className="text-xl font-semibold text-[#EB5C26] mb-2">
               5. Use of the Site
             </h2>
             <p>You agree to use the Site only for lawful purposes and in accordance with these Terms. You shall not:</p>
@@ -108,7 +108,7 @@ const TermsConditions = () => {
           </section>
 
           <section>
-            <h2 className="text-xl font-semibold text-indigo-700 mb-2">
+            <h2 className="text-xl font-semibold text-[#EB5C26] mb-2">
               6. Fees and Payments
             </h2>
             <p>
@@ -125,7 +125,7 @@ const TermsConditions = () => {
           </section>
 
           <section>
-            <h2 className="text-xl font-semibold text-indigo-700 mb-2">
+            <h2 className="text-xl font-semibold text-[#EB5C26] mb-2">
               7. Cross-Border Transactions
             </h2>
             <p>
@@ -145,7 +145,7 @@ const TermsConditions = () => {
           </section>
 
           <section>
-            <h2 className="text-xl font-semibold text-indigo-700 mb-2">
+            <h2 className="text-xl font-semibold text-[#EB5C26] mb-2">
               8. Privacy and Data Protection
             </h2>
             <p>
@@ -160,7 +160,7 @@ const TermsConditions = () => {
           </section>
 
           <section>
-            <h2 className="text-xl font-semibold text-indigo-700 mb-2">
+            <h2 className="text-xl font-semibold text-[#EB5C26] mb-2">
               9. Intellectual Property
             </h2>
             <p>
@@ -176,7 +176,7 @@ const TermsConditions = () => {
           </section>
 
           <section>
-            <h2 className="text-xl font-semibold text-indigo-700 mb-2">
+            <h2 className="text-xl font-semibold text-[#EB5C26] mb-2">
               10. Disclaimers
             </h2>
             <ul className="list-disc pl-6 mt-2 space-y-2">
@@ -196,7 +196,7 @@ const TermsConditions = () => {
           </section>
 
           <section>
-            <h2 className="text-xl font-semibold text-indigo-700 mb-2">
+            <h2 className="text-xl font-semibold text-[#EB5C26] mb-2">
               11. Indemnification
             </h2>
             <p>
@@ -209,7 +209,7 @@ const TermsConditions = () => {
           </section>
 
           <section>
-            <h2 className="text-xl font-semibold text-indigo-700 mb-2">
+            <h2 className="text-xl font-semibold text-[#EB5C26] mb-2">
               12. Termination
             </h2>
             <p>
@@ -221,7 +221,7 @@ const TermsConditions = () => {
           </section>
 
           <section>
-            <h2 className="text-xl font-semibold text-indigo-700 mb-2">
+            <h2 className="text-xl font-semibold text-[#EB5C26] mb-2">
               13. Amendments
             </h2>
             <p>
@@ -234,7 +234,7 @@ const TermsConditions = () => {
           </section>
 
           <section>
-            <h2 className="text-xl font-semibold text-indigo-700 mb-2">
+            <h2 className="text-xl font-semibold text-[#EB5C26] mb-2">
               14. Governing Law and Dispute Resolution
             </h2>
             <p>
@@ -248,7 +248,7 @@ const TermsConditions = () => {
           </section>
 
           <section>
-            <h2 className="text-xl font-semibold text-indigo-700 mb-2">
+            <h2 className="text-xl font-semibold text-[#EB5C26] mb-2">
               15. Contact Information
             </h2>
             <p>
@@ -258,16 +258,11 @@ const TermsConditions = () => {
             <ul className="mt-2 space-y-1">
               <li>
                 📧 <strong>Email:</strong>{" "}
-                <a href="mailto:support@remito.pe" className="text-indigo-600 underline">
+                <a href="mailto:support@remito.pe" className="text-[#EB5C26] underline">
                   support@remito.pe
                 </a>
               </li>
-              <li>
-                🌐 <strong>Website:</strong>{" "}
-                <a href="https://www.remito.pe" className="text-indigo-600 underline">
-                  www.remito.pe
-                </a>
-              </li>
+              
               <li>
                 📍 <strong>Address:</strong> Lima, Peru
               </li>

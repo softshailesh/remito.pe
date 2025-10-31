@@ -53,31 +53,31 @@ const Works = () => {
     <section className="bg-[#F5F5F5] py-16 flex justify-center overflow-hidden w-full">
       <div className="w-full max-w-[1350px] box-border px-10 md:px-10">
         {/* Section Heading */}
-        <h2 className="text-3xl md:text-4xl font-bold text-center text-slate-800 mb-12">
+        <h2 className="text-[26px] sm:text-[28px] md:text-[36px] lg:text-[46px] font-[700] md:font-[700] text-center text-slate-800 ">
           How It Works
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16">
+        <div className="flex flex-col-reverse md:grid md:grid-cols-2 md:gap-16">
           {/* Left Image */}
-          <div className="flex justify-center md:justify-end mb-10 md:mb-0">
-            <div className="flex justify-center md:justify-start order-1 md:order-none min-h-[460px] max-h-[460px] bg-white p-[27px] rounded-[10px] shadow-sm">
+          <div className="flex justify-center md:justify-end  mt-10 md:mb-0">
+            <div className="flex justify-center md:justify-start order-1 md:order-none min-h-[460px] max-h-[460px] md:h-[460px] bg-white p-[27px] rounded-[10px] shadow-sm">
               <AnimatePresence mode="wait">
                 <motion.img
                   key={steps[activeIndex].image}
                   src={steps[activeIndex].image}
                   alt="How It Works"
-                  className="border-2 border-gray-100 rounded-[10px] shadow-sm w-full h-full flex items-center justify-center overflow-hidden"
+                  className="border-2 border-gray-100 rounded-[10px] shadow-sm w-full h-full md:h-full sm:h-96 flex items-center justify-center overflow-hidden"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -20 }}
-                  transition={{ duration: 0.6, ease: "easeInOut" }}
+                  transition={{ duration: 0.5, ease: "easeInOut" }}
                 />
               </AnimatePresence>
             </div>
           </div>
 
           {/* Step Content */}
-          <div className="relative flex items-start px-4">
+          <div className="relative flex items-start  order-1 md:order-2 mt-10 md:mb-0">
             <div className=" flex-1">
               {steps.map((step, index) => (
                 <div
@@ -90,7 +90,7 @@ const Works = () => {
                 >
                   <div
                     key={index}
-                    className={`transition-all duration-700 ${index === activeIndex
+                    className={`transition-all duration-1000 ${index === activeIndex
                         ? "opacity-100 translate-x-0"
                         : "opacity-50 translate-x-2"
                       }`}

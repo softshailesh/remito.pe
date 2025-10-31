@@ -5,8 +5,8 @@ import { NavLink } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer className="bg-white border-t border-gray-100 py-10 flex flex-col justify-center w-full">
-      <div className="container mx-auto px-6 md:px-10 lg:px-20 grid grid-cols-1 md:grid-cols-2 gap-10 w-full max-w-[1350px] ">
+    <footer className="bg-white border-t border-gray-100  flex flex-col justify-center w-full">
+      <div className="container mx-auto py-10 px-6 md:px-10 lg:px-20 grid grid-cols-1 md:grid-cols-2 gap-10 w-full max-w-[1350px] ">
         {/* Left Section */}
         <div>
           <img src={remiti_logo} alt="RemitoPe Logo" className="h-10 mb-3" />
@@ -42,7 +42,7 @@ const Footer = () => {
                 
                 <NavLink
                   to="#"
-                  onClick={() => window.location.href = "https://portal.remito.pe/"}
+                  onClick={() =>window.open("https://portal.remito.pe/", "_blank") }
                   className="hover:text-orange-500 transition"
                 >
                   Sign In
@@ -91,7 +91,7 @@ const Footer = () => {
       </div>
 
       {/* Bottom Section */}
-      <div className="border-t border-gray-100 mt-10 pt-4 text-center text-gray-400 text-sm">
+      <div className="border-t border-gray-100 py-5 pt-4 text-center text-gray-400 text-sm">
         Copyright ©{" "}
         <span className="text-orange-500 font-medium">remitope</span>. All
         Rights Reserved.

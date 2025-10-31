@@ -5,6 +5,8 @@ import PublicRoute from "./publicRoute";
 import ContactUs from "../../pages/front/contactUs";
 import TermsConditions from "../../pages/front/terms&conditions";
 import PrivacyPolicy from "../../pages/privacyPolicy";
+import Login from "../../pages/front/components/login";
+
 
 const Allroutes = () => {
   return (
@@ -15,6 +17,7 @@ const Allroutes = () => {
         <Route path="/terms-conditions" element={<TermsConditions />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
       </Route>
+     <Route path="/login" element={<Login />} />
       {/* <Route path="/terms-conditions" element={<TermsConditions />} />
       <Route path="/privacy-policy" element={<PrivacyPolicy />} /> */}
     </Routes>
