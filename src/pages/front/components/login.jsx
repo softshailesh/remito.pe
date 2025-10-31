@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { FiMail, FiLock, FiEye, FiEyeOff } from "react-icons/fi";
 import logo from "../../../assets/remitologo.svg";
 import { loginUser } from "../../../store/slice/authSlice";
 import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const LoginPage = () => {
   const dispatch = useDispatch();
@@ -16,27 +17,36 @@ const LoginPage = () => {
     password: "",
   });
 
-  // Handle Input Change
+  
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  // Submit Login Form
+  
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!formData.email || !formData.password) {
-      alert("Please enter both email and password.");
+      toast.warn("Please enter both email and password.");
       return;
     }
+
     dispatch(loginUser(formData))
       .unwrap()
       .then(() => {
-        navigate("/dashboard"); // ✅ Redirect after success (change path as needed)
+        toast.success("Login successful!");
+        navigate("/enquiry");
       })
-      .catch(() => {
-        // Error is already handled by slice
+      .catch((err) => {
+        toast.error(err || "Invalid email or password.");
       });
   };
+
+  // 🔹 Auto redirect if already logged in
+  useEffect(() => {
+    if (token) {
+      navigate("/enquiry");
+    }
+  }, [token, navigate]);
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-[#F08A68] px-4">
@@ -48,7 +58,7 @@ const LoginPage = () => {
 
         {/* Login Form */}
         <form onSubmit={handleSubmit}>
-          {/* Email */}
+          {/* Email Field */}
           <div className="mb-4">
             <label className="block text-gray-700 text-sm font-medium mb-2">
               Email Address
@@ -69,7 +79,7 @@ const LoginPage = () => {
             </div>
           </div>
 
-          {/* Password */}
+          {/* Password Field */}
           <div className="mb-6">
             <label className="block text-gray-700 text-sm font-medium mb-2">
               Password
@@ -97,20 +107,15 @@ const LoginPage = () => {
             </div>
           </div>
 
-          {/* Error Message */}
-          {error && (
-            <p className="text-red-500 text-sm text-center mb-4">
-              {error}
-            </p>
-          )}
-
           {/* Submit Button */}
           <button
             type="submit"
             disabled={loading}
             className={`w-full ${
-              loading ? "bg-[#e67a59] cursor-not-allowed" : "bg-[#F08A68] hover:bg-[#e67a59]"
-            } text-white font-medium py-3 rounded-md transition`}
+              loading
+                ? "bg-[#e67a59] cursor-not-allowed"
+                : "bg-[#F08A68] hover:bg-[#e67a59]"
+            } text-white font-medium py-3 rounded-md transition cursor-pointer`}
           >
             {loading ? "Signing In..." : "Sign In"}
           </button>
