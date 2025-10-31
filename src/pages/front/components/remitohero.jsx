@@ -2,8 +2,10 @@ import React, { useState } from "react";
 import { FaArrowRight } from "react-icons/fa";
 import AnimatedNumber from "./animatenumber";
 import remito_hero from "../../../assets/remito_hero.webp"; // Background image
+import { useNavigate } from "react-router-dom";
 
 const HeroSection = () => {
+  const navigate = useNavigate();
   const [money, setmoney] = useState({
     clientPays: 6500,
     youReceive: 569759,
@@ -30,7 +32,7 @@ const HeroSection = () => {
     >
       <div className="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-10 w-full max-w-[1350px] px-6 md:px-10 box-border">
         <div className="w-full md:w-[70%] text-center md:text-left flex flex-col justify-center space-y-10">
-          <h1 className="font-bai font-[700] text-[22px] sm:text-[28px] md:text-[48px] lg:text-[64px] text-[#0a2a57] leading-[110%] tracking-[0] mb-2">
+          <h1 className="font-bai text-[30px] sm:text-[28px] md:text-[36px] lg:text-[46px] font-[700] md:font-[700] text-[#0a2a57] leading-[110%] tracking-[0] mb-2">
             Seamless Global <br />
             Payments. Simplified for You.
             <span className="text-yellow-500 text-[30px] sm:text-[36px] md:text-[48px] lg:text-[54px] align-middle pl-2 font-[700]">
@@ -50,7 +52,7 @@ const HeroSection = () => {
               Get started <FaArrowRight className="text-sm" />
             </button>
             <button
-            onClick={() => window.open("https://portal.remito.pe/", "_blank")}
+             onClick={() => navigate("/contact-us")}
              className="border border-orange-300 text-[#EB5C26] font-medium px-10 py-3 rounded-md cursor-pointer hover:bg-orange-50 transition w-full sm:w-auto bg-[#EB5C2626]">
               Book for demo
             </button>
@@ -163,7 +165,7 @@ const HeroSection = () => {
               <p className="text-red-500 text-xs">You lose: 1.2%</p>
             </div>
             <div className="border-t pt-3">
-              <p className="text-gray-500">PayPal</p>
+              <p className="text-gray-500">cards </p>
               <p className="text-[#0a2a57] font-bold">
                 ₹<AnimatedNumber to={money.paypalAmount} />
               </p>

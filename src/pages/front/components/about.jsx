@@ -21,7 +21,7 @@ const AboutSection = () => {
 
           {/* Right Content */}
           <div className="text-left z-10">
-            <h4 className=" font-[700] text-[24px] mb-1">About Us</h4>
+            <h4 className="text-[30px] sm:text-[28px] md:text-[36px] lg:text-[46px] font-[700] md:font-[700]  mb-1">About Us</h4>
 
             {/* Orange underline */}
             <div className="flex gap-1 mb-5">
@@ -37,10 +37,10 @@ const AboutSection = () => {
               Simplifying Global Payments, <br className="hidden md:block" />
               Empowering Global Growth
             </h2> */}
-            <h2 className="text-[#0B153C] text-[28px] sm:text-[36px] md:text-4xl lg:text-[38px] font-[700] leading-snug mb-6">
-  Simplifying Global Payments, <br className="hidden md:block" />
-  Empowering Global Growth
-</h2>
+            <h2 className="text-[#0B153C] text-[26px] sm:text-[28px] md:text-[36px] lg:text-[36px] font-[700] md:font-[700] leading-snug mb-6">
+              Simplifying Global Payments, <br className="hidden md:block" />
+              Empowering Global Growth
+            </h2>
 
 
             <p className="text-[#525F7F] text-[16px] md:text-base leading-relaxed mb-4 font-[400]">

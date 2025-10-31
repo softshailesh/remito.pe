@@ -48,7 +48,7 @@ const Choose = () => {
   return (
     <section className="bg-gray-50 py-16 flex justify-center w-full">
       <div className="w-full max-w-[1350px] box-border px-6 md:px-10 flex flex-col items-center">
-        <h2 className="text-[46px] md:text-4xl font-[700] text-center text-slate-800 mb-8">
+        <h2 className="text-[26px] sm:text-[28px] md:text-[36px] lg:text-[46px] font-[700] md:font-[700] text-center text-slate-800 mb-8">
           Why Choose Us?
         </h2>
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
@@ -72,7 +72,7 @@ const Choose = () => {
                     />
                   </div>
                   <div>
-                    <h3 className="font-bold text-xl text-slate-800 mb-1">
+                    <h3 className="text-[22px] font-[700] text-slate-800 mb-1 ">
                       {feature.title}
                     </h3>
                     <p className="text-gray-400 text-sm leading-relaxed">

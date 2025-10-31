@@ -52,7 +52,7 @@ const IndustriesWeServe = () => (
      <div className="w-full max-w-[1350px] box-border px-6 md:px-10">
     {/* Section Title */}
     <div className="text-center mb-12 max-w-4xl mx-auto">
-      <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+      <h2 className="text-[26px] sm:text-[28px] md:text-[36px] lg:text-[46px] font-[700] md:font-[700] text-gray-800 mb-4">
         Industries We Serve
       </h2>
       <p className="text-gray-500 text-sm md:text-base px-9 ">
@@ -83,7 +83,7 @@ const IndustriesWeServe = () => (
               <img
                 src={item.icon}
                 alt={item.title}
-                className="w-10 h-10 object-contain"
+                className="w-[70px] h-[60px] object-contain"
               />
             </div>
             <h3 className="text-[20px] font-[700] text-gray-800 mb-2 whitespace-nowrap">
@@ -121,7 +121,7 @@ const IndustriesWeServe = () => (
               <img
                 src={item.icon}
                 alt={item.title}
-                className="w-10 h-10 object-contain"
+                className="w-[70px] h-[60px] object-contain"
               />
             </div>
             <h3 className="text-[20px] font-[700] text-gray-800 mb-2">
@@ -154,9 +154,10 @@ const IndustriesWeServe = () => (
 
     {/* Decorative dots on bottom-right as background image */}
     <div
-      className="absolute bottom-4 right-4 w-24 h-24 bg-no-repeat bg-contain"
-      style={{ backgroundImage: `url(${Dots})` }}
-    />
+  className="absolute bottom-4 right-4 w-24 h-24 bg-no-repeat bg-contain hidden sm:block"
+  style={{ backgroundImage: `url(${Dots})` }}
+/>
+
     </div>
   </div>
 );
