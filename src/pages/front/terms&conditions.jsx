@@ -255,27 +255,19 @@ const TermsConditions = () => {
               If you have any questions or concerns about these Terms or our
               Services, please contact us at:
             </p>
-            <ul className="mt-2 space-y-1">
-              <li>
-                📧 <strong>Email:</strong>{" "}
-                <a href="mailto:support@remito.pe" className="text-[#EB5C26] underline">
-                  support@remito.pe
-                </a>
-              </li>
-              
-              <li>
-                📍 <strong>Address:</strong> Lima, Peru
-              </li>
-            </ul>
+            <a
+            href="https://remito.pe/contact-us"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[#EB5C26] hover:underline font-medium"
+          >
+            https://remito.pe/contact-us
+          </a>
           </section>
 
           <section className="pt-6 border-t border-gray-200">
             <p className="text-sm text-gray-500 italic">
-              Disclaimer: These Terms and Conditions are provided for
-              informational purposes only. You should consult with a legal expert
-              to ensure compliance with applicable laws and to address any
-              specifics about your business operations, including international
-              data transfer and financial compliance laws such as GDPR or CCPA.
+              Disclaimer: These Terms and Conditions are a starting point and should be reviewed by a legal professional to ensure compliance with applicable laws and to address any specifics about your business operations.
             </p>
           </section>
         </div>

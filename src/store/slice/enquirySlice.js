@@ -1,7 +1,10 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-import { addEnquiryApi } from "../../api/thunk/frontapi/enquirey.jsx";
+import {
+  addEnquiryApi,
+  getAllEnquiryApi,
+} from "../../api/thunk/frontapi/enquirey.jsx";
 
-// 🔹 Async Thunk for sending enquiry form
+// 🔹 Add Enquiry
 export const addEnquiry = createAsyncThunk(
   "enquiry/addEnquiry",
   async (formData, { rejectWithValue }) => {
@@ -16,6 +19,21 @@ export const addEnquiry = createAsyncThunk(
   }
 );
 
+// 🔹 Get All Enquiries (pagination)
+export const getAllEnquiries = createAsyncThunk(
+  "enquiry/getAllEnquiries",
+  async ({ page = 1, limit = 5 }, { rejectWithValue }) => {
+    try {
+      const data = await getAllEnquiryApi(page, limit);
+      return data; // expects { data, total, page, limit }
+    } catch (error) {
+      return rejectWithValue(
+        error.response?.data?.message || "Failed to fetch enquiries."
+      );
+    }
+  }
+);
+
 const enquirySlice = createSlice({
   name: "enquiry",
   initialState: {
@@ -23,6 +41,10 @@ const enquirySlice = createSlice({
     success: false,
     error: null,
     data: null,
+    allEnquiries: [],
+    total: 0,
+    page: 1,
+    limit: 5,
   },
   reducers: {
     resetEnquiryState: (state) => {
@@ -34,6 +56,7 @@ const enquirySlice = createSlice({
   },
   extraReducers: (builder) => {
     builder
+      // ✅ Add Enquiry
       .addCase(addEnquiry.pending, (state) => {
         state.loading = true;
         state.success = false;
@@ -47,6 +70,26 @@ const enquirySlice = createSlice({
       .addCase(addEnquiry.rejected, (state, action) => {
         state.loading = false;
         state.success = false;
+        state.error = action.payload;
+      })
+
+      // ✅ Get All Enquiries
+      .addCase(getAllEnquiries.pending, (state) => {
+        state.loading = true;
+        state.error = null;
+      })
+      .addCase(getAllEnquiries.fulfilled, (state, action) => {
+        state.loading = false;
+        const { data, total, page, limit } = action.payload;
+
+        // 🔧 Backend returns "data" instead of "enquiries"
+        state.allEnquiries = data || [];
+        state.total = total || 0;
+        state.page = page || 1;
+        state.limit = limit || 5;
+      })
+      .addCase(getAllEnquiries.rejected, (state, action) => {
+        state.loading = false;
         state.error = action.payload;
       });
   },
