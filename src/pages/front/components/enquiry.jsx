@@ -59,7 +59,7 @@ const AllEnquiryList = () => {
               <th className="p-3 text-left">Country</th>
               <th className="p-3 text-left">Service Type</th>
               <th className="p-3 text-left">Message</th>
-              <th className="p-3 text-left">Status</th>
+              {/* <th className="p-3 text-left">Status</th> */}
               <th className="p-3 text-left">Date</th>
               <th className="p-3 text-center w-24">Actions</th>
             </tr>
@@ -91,7 +91,7 @@ const AllEnquiryList = () => {
                   >
                     {item.message || "—"}
                   </td>
-                  <td
+                  {/* <td
                     className={`p-3 font-medium ${
                       item.status === "Pending"
                         ? "text-yellow-600"
@@ -101,7 +101,7 @@ const AllEnquiryList = () => {
                     }`}
                   >
                     {item.status || "—"}
-                  </td>
+                  </td> */}
                   <td className="p-3 text-gray-600">
                     {new Date(item.createdAt).toLocaleString("en-GB", {
                       day: "2-digit",
@@ -215,7 +215,7 @@ const AllEnquiryList = () => {
                 value={selectedEnquiry.type_of_service}
               />
               <Detail label="Message" value={selectedEnquiry.message}  />
-              <Detail
+              {/* <Detail
                 label="Status"
                 value={selectedEnquiry.status}
                 className={
@@ -225,7 +225,7 @@ const AllEnquiryList = () => {
                     ? "text-green-600 font-medium"
                     : "text-gray-600"
                 }
-              />
+              /> */}
               <Detail
                 label="Date"
                 value={new Date(selectedEnquiry.createdAt).toLocaleString(
