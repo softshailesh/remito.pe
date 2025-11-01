@@ -55,11 +55,11 @@ const IndustriesWeServe = () => (
       <h2 className="text-[26px] sm:text-[28px] md:text-[36px] lg:text-[46px] font-[700] md:font-[700] text-gray-800 mb-4">
         Industries We Serve
       </h2>
-      <p className="text-gray-500 text-sm md:text-base px-9 ">
+      {/* <p className="text-gray-500 text-sm md:text-base px-9 ">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
         incididunt Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt
-      </p>
+      </p> */}
     </div>
 
     {/* Top 4 industries grid with right and bottom borders */}

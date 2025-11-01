@@ -108,7 +108,15 @@ const Footer = () => {
       {/* Bottom Section */}
       <div className="border-t border-gray-100 py-5 pt-4 text-center text-gray-400 text-sm">
         Copyright ©{" "}
-        <span className="text-orange-500 font-medium">remitope</span>. All
+        <a
+  href="https://remito.pe/"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="text-orange-500 font-medium hover:underline"
+>
+  remito.pe
+</a>
+. All
         Rights Reserved.
       </div>
     </footer>

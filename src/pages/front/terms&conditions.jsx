@@ -257,7 +257,7 @@ const TermsConditions = () => {
             </p>
             <a
             href="https://remito.pe/contact-us"
-            target="_blank"
+            
             rel="noopener noreferrer"
             className="text-[#EB5C26] hover:underline font-medium"
           >
