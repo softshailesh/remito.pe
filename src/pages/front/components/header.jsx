@@ -81,14 +81,14 @@ const Navbar = () => {
             )}
 
             {/* Contact Us link (only show this on contact page) */}
-            {isContactPage && (
+            {/* {isContactPage && (
               <NavLink
                 to="/contact-us"
                 className={`text-[15px] font-semibold ${activeLink}`}
               >
                 Contact Us
               </NavLink>
-            )}
+            )} */}
           </div>
 
           {/* Right: Sign In + Mobile Toggle */}
