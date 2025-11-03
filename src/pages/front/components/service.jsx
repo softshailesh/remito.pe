@@ -47,8 +47,8 @@ const features = [
 
 const CrossBorderPayments = () => {
   return (
-    <section className="bg-white py-16 px-6 md:px-10">
-      <div className="max-w-7xl mx-auto text-center">
+    <section className="bg-white py-16 mediascreenmob px-6 md:px-10">
+      <div className="max-w-[1350px] px-6 md:px-10 mx-auto text-center">
         <h2 className="text-[#0A1F44] text-[26px] sm:text-[28px] md:text-[36px] lg:text-[46px] font-[700] md:font-[700] leading-snug mb-12">
           Simplify cross-border payments <br className="hidden sm:block" /> for
           businesses
