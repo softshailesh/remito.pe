@@ -39,7 +39,7 @@ const PaymentSolutions = () => {
   ];
 
   return (
-    <section className="bg-white py-16 w-full flex justify-center">
+    <section className="bg-white py-16 mediascreenmob w-full flex justify-center">
       <div className="w-full max-w-[1350px] box-border px-6 md:px-10">
         {/* Heading Section */}
         <h2 className="text-[26px] sm:text-[28px] md:text-[36px] lg:text-[46px] font-[700] md:font-[700] md:font-[700] text-center text-[#0b153c] mb-4">

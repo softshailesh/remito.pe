@@ -50,8 +50,8 @@ const Works = () => {
   }, [hovered]);
 
   return (
-    <section className="bg-[#F5F5F5] py-16 flex justify-center overflow-hidden w-full">
-      <div className="w-full max-w-[1350px] box-border px-10 md:px-10">
+    <section className="bg-[#F5F5F5] py-16 mediascreenmob flex justify-center overflow-hidden w-full">
+      <div className="w-full max-w-[1350px] box-border px-6 md:px-10">
         {/* Section Heading */}
         <h2 className="text-[26px] sm:text-[28px] md:text-[36px] lg:text-[46px] font-[700] md:font-[700] text-center text-slate-800 ">
           How It Works
@@ -60,7 +60,7 @@ const Works = () => {
         <div className="flex flex-col-reverse md:grid md:grid-cols-2 md:gap-16">
           {/* Left Image */}
           <div className="flex justify-center md:justify-end  mt-10 md:mb-0">
-            <div className="flex justify-center md:justify-start order-1 md:order-none min-h-[460px] max-h-[460px] md:h-[460px] bg-white p-[27px] rounded-[10px] shadow-sm">
+            <div className="flex justify-center md:justify-start order-1 md:order-none md:min-h-[460px] max-h-[460px] md:h-[460px] min-h-[300px]  bg-white md:p-[27px] p-[10px] rounded-[10px] shadow-sm">
               <AnimatePresence mode="wait">
                 <motion.img
                   key={steps[activeIndex].image}

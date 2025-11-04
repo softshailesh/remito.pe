@@ -46,7 +46,7 @@ const Choose = () => {
   ];
 
   return (
-    <section className="bg-gray-50 py-16 flex justify-center w-full">
+    <section className="bg-gray-50 py-16 mediascreenmob flex justify-center w-full">
       <div className="w-full max-w-[1350px] box-border px-6 md:px-10 flex flex-col items-center">
         <h2 className="text-[26px] sm:text-[28px] md:text-[36px] lg:text-[46px] font-[700] md:font-[700] text-center text-slate-800 mb-8">
           Why Choose Us?
@@ -58,11 +58,11 @@ const Choose = () => {
               {features.map((feature, index) => (
                 <div
                   key={index}
-                  className="bg-white shadow-sm rounded-xl p-5 flex items-start space-x-4 hover:shadow-md transition"
+                  className="bg-white shadow-sm rounded-xl p-5 md:flex items-start space-x-4 hover:shadow-md transition"
                 >
                   {/* Icon with inline background color */}
                   <div
-                    className="shrink-0 rounded-lg p-3 flex items-center justify-center"
+                    className="shrink-0 rounded-lg p-3 flex items-center md:justify-center justify-start"
                     
                   >
                     <img

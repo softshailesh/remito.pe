@@ -13,7 +13,7 @@ import Kotak from "../../../assets/11.svg";
 import CitiBank from "../../../assets/12.svg";
 import HSBC from "../../../assets/13.svg";
 
-const SLIDE_SPEED = 40;
+const SLIDE_SPEED = 5;
 
 const logos = [
   Federal,

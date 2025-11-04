@@ -4,7 +4,7 @@ import plane from "../../../assets/about-image.svg";
 
 const AboutSection = () => {
   return (
-    <section className=" bg-[#EDECFD] py-16 overflow-hidden w-full flex justify-center">
+    <section className=" bg-[#EDECFD] py-16 mediascreenmob overflow-hidden w-full flex justify-center">
       <div className="relative w-full max-w-[1350px] box-border px-6 md:px-10 flex justify-center">
         <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-10">
           {/* Left Image */}
