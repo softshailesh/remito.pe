@@ -35,6 +35,7 @@ const HeroSection = () => {
           <h1 className="font-bai text-[30px] sm:text-[28px] md:text-[36px] lg:text-[46px] font-[700] md:font-[700] text-[#0a2a57] leading-[110%] tracking-[0] mb-2">
             Seamless Global <br />
             Payments. Simplified for You.
+            <br />
             <span className="text-yellow-500 text-[30px] sm:text-[36px] md:text-[48px] lg:text-[54px] align-middle pl-2 font-[700]">
               ₹<AnimatedNumber to={money.saving} />
             </span>

@@ -13,7 +13,7 @@ import Kotak from "../../../assets/11.svg";
 import CitiBank from "../../../assets/12.svg";
 import HSBC from "../../../assets/13.svg";
 
-const SLIDE_SPEED = 5;
+const SLIDE_SPEED = 5; 
 
 const logos = [
   Federal,
@@ -33,18 +33,15 @@ const logos = [
 
 const LogoSlider = () => (
   <div className="relative w-full bg-white border-b border-blue-100 py-4 flex justify-center">
-    <div className="w-full max-w-[1350px] box-border px-6 md:px-10 overflow-hidden">
-      <div className="whitespace-nowrap flex animate-slide">
-        {[...logos , ...logos  , ...logos ].map((logo, i) => (
+    <div className="w-full max-w-[1350px] overflow-hidden px-6 md:px-10">
+      {/* Outer wrapper for smooth looping */}
+      <div className="flex w-max animate-slide">
+        {[...logos, ...logos].map((logo, i) => (
           <img
             key={i}
             src={logo}
             alt={`partner-logo-${i}`}
-            onError={(e) => {
-              // console.error(`❌ Image failed to load: partner-logo-${i}`, logo);
-              e.target.style.display = "none"; // hide broken image
-            }}
-            onLoad={() => console.log(`✅ Image loaded successfully: partner-logo-${i}`)}
+            onError={(e) => (e.target.style.display = "none")}
             className="h-8 md:h-12 mx-8 inline-block opacity-90 object-contain transition-transform duration-300 hover:scale-105"
             style={{ width: "auto" }}
           />
@@ -52,10 +49,11 @@ const LogoSlider = () => (
       </div>
     </div>
 
+    {/* ✅ CSS for seamless infinite loop */}
     <style>{`
       @keyframes slide {
-        0% { transform: translateX(0%); }
-        100% { transform: translateX(-100%); }
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
       }
       .animate-slide {
         animation: slide ${SLIDE_SPEED}s linear infinite;
