@@ -24,7 +24,7 @@ const Landingpage = () => {
       <LogoSlider />
 
       {/* Scrollable Sections */}
-      <section id="about">
+      <section id="about" >
         <AboutSection />
       </section>
 
