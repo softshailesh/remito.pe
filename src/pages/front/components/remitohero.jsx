@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { FaArrowRight } from "react-icons/fa";
 import AnimatedNumber from "./animatenumber";
 import remito_hero from "../../../assets/remito_hero.webp"; // Background image
@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 
 const HeroSection = () => {
   const navigate = useNavigate();
+  const [prevSaved, setPrevSaved] = useState(0);
   const [money, setmoney] = useState({
     clientPays: 6500,
     youReceive: 569759,
@@ -15,6 +16,10 @@ const HeroSection = () => {
     saving: 23500,
   });
 
+  useEffect(() =>{
+    console.log("money.saving:", money.saving);
+ setPrevSaved(money.saving);
+  },[money])
   // Slider scale marks
   const RangeMarks = () => (
     <div className="flex justify-between text-xs text-gray-400 px-1 mb-1 select-none">
@@ -37,7 +42,7 @@ const HeroSection = () => {
             Payments. Simplified for You.
             <br />
             <span className="text-yellow-500 text-[30px] sm:text-[36px] md:text-[48px] lg:text-[54px] align-middle pl-2 font-[700]">
-              ₹<AnimatedNumber to={money.saving} />
+              ₹ <AnimatedNumber from={prevSaved} to={money.saving} />
             </span>
           </h1>
 
