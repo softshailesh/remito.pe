@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { FaArrowRight } from "react-icons/fa";
 import AnimatedNumber from "./animatenumber";
 import remito_hero from "../../../assets/remito_hero.webp";

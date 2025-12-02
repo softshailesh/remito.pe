@@ -10,6 +10,14 @@ const AllEnquiryList = () => {
     (state) => state.enquiry
   );
 
+  const [logout, setLogout] = useState(false);
+
+  useEffect(() => {
+    if (logout) {
+      localStorage.clear();
+      window.location.href = "/login";
+    }
+  }, [logout]);
   const [page, setPage] = useState(1);
   const [selectedEnquiry, setSelectedEnquiry] = useState(null);
 
@@ -36,10 +44,14 @@ const AllEnquiryList = () => {
     );
 
   if (error)
-    return <p className="text-center mt-10 text-red-500 font-medium">{error}</p>;
+    return (
+      <p className="text-center mt-10 text-red-500 font-medium">{error}</p>
+    );
 
   return (
     <div className="bg-white shadow-md border border-gray-200 rounded-xl overflow-hidden m-6">
+      {/* logout */}
+      <button onClick={() => setLogout(true)}>Logout</button>
       {/* Header */}
       <div className="flex flex-wrap items-center justify-between bg-gradient-to-r from-[#f57c47] to-[#F08A68] text-white px-6 py-4">
         <h2 className="font-semibold text-lg tracking-wide flex items-center gap-2">
@@ -214,7 +226,7 @@ const AllEnquiryList = () => {
                 label="Service Type"
                 value={selectedEnquiry.type_of_service}
               />
-              <Detail label="Message" value={selectedEnquiry.message}  />
+              <Detail label="Message" value={selectedEnquiry.message} />
               {/* <Detail
                 label="Status"
                 value={selectedEnquiry.status}
@@ -250,8 +262,8 @@ const AllEnquiryList = () => {
 // ✅ Small reusable detail line component
 const Detail = ({ label, value, className }) => (
   <div className="flex justify-between gap-2  border-b pb-1">
-    <span className="font-semibold text-gray-800">{label}: {" "}</span>
-    <span className={`text-gray-600 ${className}`}>{value || "—"} {" "}</span>
+    <span className="font-semibold text-gray-800">{label}: </span>
+    <span className={`text-gray-600 ${className}`}>{value || "—"} </span>
   </div>
 );
 
