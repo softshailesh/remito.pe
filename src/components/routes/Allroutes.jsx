@@ -47,7 +47,6 @@ import Enquiry from "../../pages/front/components/enquiry";
 const Allroutes = () => {
   return (
     <Routes>
-      {/* 🌐 Public Layout (Navbar + Footer) */}
       <Route element={<PublicRoute />}>
         <Route path="/" element={<Landingpage />} />
         <Route path="/contact-us" element={<ContactUs />} />
